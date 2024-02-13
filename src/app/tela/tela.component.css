@@ -1,0 +1,111 @@
+body {
+    color: aqua;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    margin-top: 50px;
+    width: 5%; /* Ajuste a largura conforme necessário */
+    margin: 0 auto;
+    background-color: rgb(80, 78, 78);
+  }
+
+  .container-Home {
+    margin-top: 10px;
+    width: 100%;
+  }
+   /* Botão Home */
+   .btn-Home {
+    margin-left: 75%;
+    background-color: #13a4c9;
+  }
+
+
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .edit-btn {
+    margin-top: 5px;
+  }
+
+
+  /* Campo e botão E-mail */
+  .form-controlEmail,
+  .form-controlTel,
+  .form-controlEnd {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  
+  /* Adicione a mesma propriedade para os campos Bootstrap padrão */
+  .form-control {
+    border-radius: 8px;
+  }
+  
+  /* Centralizar o botão Endereço */
+  .edit-btnEnd {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Centralizar o botão Salvar */
+  .btn-primary {
+    display: block;
+    margin: 20px auto;
+  }
+  
+  /* Adicionando media queries para tornar o layout responsivo */
+  
+  /* Telas menores que 768px (Mobile) */
+  @media (max-width: 767.98px) {
+    .container {
+      width: 80%;
+    }
+  
+    .form-controlEmail,
+    .form-controlTel,
+    .form-controlEnd {
+      width: 100%;
+    }
+  }
+  
+  /* Telas entre 768px e 991.98px (Tablet) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .container {
+      width: 60%; /* Ajuste conforme necessário */
+    }
+  }
+  
+  /* Telas entre 992px e 1199.98px (Tablet / Desktop) */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .container {
+      width: 70%; /* Ajuste conforme necessário */
+    }
+  }
+  
+  /* Telas maiores que 1200px (Desktop) */
+  @media (min-width: 1200px) {
+    .container {
+      width: 40%; /* Ajuste conforme necessário */
+    }
+  }
+  
+
+  .form-controlEmail,
+.form-controlTel,
+.form-controlEnd {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px; /* Adicione esta linha para bordas arredondadas */
+}
+
+/* Adicione a mesma propriedade para os campos Bootstrap padrão */
+.form-control {
+  border-radius: 8px;
+}
