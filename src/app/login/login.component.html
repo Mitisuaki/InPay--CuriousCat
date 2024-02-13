@@ -1,0 +1,181 @@
+<div class="page-container">
+    <div class="border-login">
+        <div class="button-container button-center">
+            <button [disabled]="isButtonLoginDisabled" (click)="disableButton(1)">Login</button>
+            <button [disabled]="isButtonCadastroDisabled" (click)="disableButton(2)">Cadastre-se</button>
+        </div>
+        <!-- Formulario de login-->
+        <form *ngIf="showLoginForm" class="login-form">
+            <div class="form-group">
+                <label class="label-fixed-width">Informe seu CPF</label>
+                <input type="text" placeholder="" inputmode="numeric" required pattern="[0-9]*"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+            </div>
+
+            <div class="form-group">
+                <label class="label-fixed-width">Informe sua Senha</label>
+                <input type="password" placeholder="" required>
+            </div>
+            <div class="form-group-center">
+                <input type="checkbox" id="save-password" name="save-password" class="custom-checkbox">
+                <label class="label-password-recuperate">Lembrar senha</label>
+            </div>
+
+            <div class="form-group-center">
+                <label for="password-recuperate" class="label-password-recuperate">
+                    <a (click)="showRecuperatePassword = true">Esqueci a Senha</a>
+                </label>
+            </div>
+
+            <!-- Modal de recuperação de senha -->
+            <div *ngIf="showRecuperatePassword" class="modal-overlay">
+                <div class="modal-content-password">
+                    <span class="close-button custom-close-button"
+                        (click)="showRecuperatePassword = false">&times;</span>
+                    <div class="password-recuperate">
+                        <h2>Recuperação de Senha</h2>
+                        <div class="form-group">
+                            <p>Informe os dados para recuperar a senha.</p>
+                            <div class="form-group">
+                                <label class="label-fixed-width">Informe seu E-mail</label>
+                                <input type="email" placeholder="" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="label-fixed-width">Informe seu CPF</label>
+                                <input type="text" placeholder="" inputmode="numeric" required pattern="[0-9]*"
+                                    oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                            </div>
+                            <div class="form-group button-group">
+                                <input type="button" value="Enviar" class="btn btn-primary" (click)="fecharModal()">
+                            <!--    <input type="button" value="Fechar" class="btn btn-primary" (click)="fecharModal()"> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Acessar a Conta" class="btn btn-primary">
+            </div>
+        </form>
+
+        <!-- Formulario de cadastro-->
+        <form *ngIf="showCadastroForm" class="cadastro-form">
+            <div class="form-group">
+                <label class="label-fixed-width">Nome Completo</label>
+                <input placeholder="" required>
+            </div>
+
+            <div class="form-group">
+                <label class="label-fixed-width">CPF</label>
+                <input type="text" placeholder="" inputmode="numeric" required pattern="[0-9]*"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+            </div>
+
+            <div class="form-group">
+                <label class="label-fixed-width">CEP</label>
+                <input type="text" placeholder="" inputmode="numeric">
+            </div>
+
+            <div class="form-group">
+                <label class="label-fixed-width">Endereco</label>
+                <input type="text" placeholder="">
+            </div>
+
+            <div class="form-group">
+                <label class="label-fixed-width">Número</label>
+                <input type="text" placeholder="">
+            </div>
+
+            <div class="form-group">
+                <label class="label-fixed-width">Bairro</label>
+                <input type="text" placeholder="">
+            </div>
+
+            <div class="form-group">
+                <label class="label-fixed-width">Cidade</label>
+                <input type="text" placeholder="">
+            </div>
+
+            <div class="form-group">
+                <label class="label-fixed-width">Estado</label>
+                <input type="text" placeholder="">
+            </div>
+
+            <div class="form-group">
+                <label class="label-fixed-width">E-mail</label>
+                <input type="email" placeholder="" required>
+            </div>
+
+            <div class="form-group">
+                <label class="label-fixed-width">Senha</label>
+                <input type="password" placeholder="" required>
+            </div>
+
+            <div class="form-group">
+                <label class="label-fixed-width">Confirme sua Senha</label>
+                <input type="password" placeholder="" required>
+            </div>
+
+
+            <div class="form-group">
+                <input type="checkbox" id="aceitar-termos" name="aceitar-termos" class="custom-checkbox">
+                <label for="aceitar-termos" class="label-termos">
+                    Li e concordo com os <a (click)="showTermsModal = true">termos e condições.</a>
+                </label>
+            </div>
+
+            <!-- Modal dos Termos e Condições -->
+            <div *ngIf="showTermsModal" class="modal-overlay">
+                <div class="modal-content">
+                    <span class="close-button custom-close-button" (click)="showTermsModal = false">&times;</span>
+                    <div class="terms-and-conditions">
+                        <h2>TERMOS E CONDIÇÕES</h2>
+                        <div class="terms">
+                            <p>Para usar o Aplicativo, você deve ter pelo menos 18 anos e possuir capacidade legal para
+                                celebrar contratos. Você
+                                também deve ter uma conta bancária válida em seu nome. Você é responsável por garantir
+                                que as informações fornecidas
+                                sejam precisas e completas.</p>
+                            <p>Você é responsável pela segurança da sua conta e informações de login, incluindo a
+                                manutenção da confidencialidade de sua senha.
+                                Você é responsável por todas as atividades que ocorram em sua conta. Você deve nos
+                                notificar imediatamente se suspeitar de qualquer atividade não autorizada em sua conta.
+                            </p>
+                            <p>Respeitamos sua privacidade e cumprimos todas as leis aplicáveis de proteção de dados.
+                                Nosso compromisso com a sua privacidade está descrito em nossa Política de Privacidade.
+                            </p>
+                            <p>O Aplicativo e os Serviços são fornecidos apenas para seu uso pessoal e não comercial.
+                                Você concorda em não utilizar o Aplicativo ou os Serviços para qualquer finalidade
+                                ilegal ou não autorizada.
+                                Você concorda em cumprir todas as leis, regras e regulamentos aplicáveis ao uso do
+                                Aplicativo e dos Serviços.</p>
+                            <p>Nosso objetivo é fornecer acesso contínuo e ininterrupto ao Aplicativo e aos Serviços. No
+                                entanto, ocasionalmente, podem ocorrer interrupções programadas ou não programadas do
+                                Aplicativo e dos Serviços.
+                                Não nos responsabilizamos por qualquer interrupção ou falha no Aplicativo ou nos
+                                Serviços.</p>
+                            <p>O Aplicativo e os Serviços são protegidos por leis de propriedade intelectual e pertencem
+                                a nós ou a nossos licenciadores. Você não tem direito, exceto conforme expressamente
+                                concedido por nós, a usar qualquer marca registrada,
+                                logotipo ou nome de marca em qualquer material que você criar, incluindo em seu site ou
+                                em qualquer material de publicidade.</p>
+                            <p>Podemos atualizar ou alterar estes Termos a qualquer momento. O uso continuado do
+                                Aplicativo ou dos Serviços após qualquer alteração constitui sua aceitação dos novos
+                                Termos.</p>
+                            <p>Podemos rescindir ou suspender o seu acesso ao Aplicativo e aos Serviços a qualquer
+                                momento, sem aviso prévio, por qualquer motivo ou sem motivo.
+                        </div>
+                        <div class="form-group">
+                            <input type="button" value="Fechar" class="btn btn-primary" (click)="fecharModal()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Criar Conta" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+</div>
