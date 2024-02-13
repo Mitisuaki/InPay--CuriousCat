@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, NgModel } from '@angular/forms';
-import { BuscaCepService } from './services/busca-cep.service';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 
