@@ -1,111 +1,99 @@
 body {
-    color: aqua;
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  .container {
-    margin-top: 50px;
-    width: 5%; /* Ajuste a largura conforme necessário */
-    margin: 0 auto;
-    background-color: rgb(80, 78, 78);
-  }
+  color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+ background-image: url("./Fundo2.avif");
+ background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o elemento */
+ background-position: center; /* Centraliza a imagem no elemento */
+ background-repeat: no-repeat; /* Evita a repetição da imagem */
+}
 
-  .container-Home {
-    margin-top: 10px;
-    width: 100%;
-  }
-   /* Botão Home */
-   .btn-Home {
-    margin-left: 75%;
-    background-color: #13a4c9;
-  }
+.container-Primario {
+  width: 50%;
+  margin: 0 auto;
 
+}
 
+.container {
+  color: #02EFFC;
+  width: 80%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.2); /* Cor de fundo com opacidade */
+  backdrop-filter: blur(10px); /* Desfoque para dar o efeito de vidro */
+  border-radius: 10px; /* Borda arredondada, opcional */
+  padding: 20px; /* Espaçamento interno, opcional */
+}
 
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .edit-btn {
-    margin-top: 5px;
-  }
+.header {
+  background-color: #24c2a1;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
 
+.btn-primary {
+  background-color: #24c2a1;
+  color: #fff;
+}
 
-  /* Campo e botão E-mail */
-  .form-controlEmail,
-  .form-controlTel,
-  .form-controlEnd {
-    margin-bottom: 20px;
-    width: 100%;
-    padding: 8px;
-    border-radius: 8px;
-  }
-  
-  /* Adicione a mesma propriedade para os campos Bootstrap padrão */
-  .form-control {
-    border-radius: 8px;
-  }
-  
-  /* Centralizar o botão Endereço */
-  .edit-btnEnd {
-    display: block;
-    margin: 0 auto;
-  }
-  
-  /* Centralizar o botão Salvar */
-  .btn-primary {
-    display: block;
-    margin: 20px auto;
-  }
-  
-  /* Adicionando media queries para tornar o layout responsivo */
-  
-  /* Telas menores que 768px (Mobile) */
-  @media (max-width: 767.98px) {
-    .container {
-      width: 80%;
-    }
-  
-    .form-controlEmail,
-    .form-controlTel,
-    .form-controlEnd {
-      width: 100%;
-    }
-  }
-  
-  /* Telas entre 768px e 991.98px (Tablet) */
-  @media (min-width: 768px) and (max-width: 991.98px) {
-    .container {
-      width: 60%; /* Ajuste conforme necessário */
-    }
-  }
-  
-  /* Telas entre 992px e 1199.98px (Tablet / Desktop) */
-  @media (min-width: 992px) and (max-width: 1199.98px) {
-    .container {
-      width: 70%; /* Ajuste conforme necessário */
-    }
-  }
-  
-  /* Telas maiores que 1200px (Desktop) */
-  @media (min-width: 1200px) {
-    .container {
-      width: 40%; /* Ajuste conforme necessário */
-    }
-  }
-  
+.btn-secondary {
+  background-color: #02EFFC;
+  color: #fff;
+}
 
-  .form-controlEmail,
-.form-controlTel,
-.form-controlEnd {
+.form-group {
   margin-bottom: 20px;
-  width: 100%;
-  padding: 8px;
-  border-radius: 8px; /* Adicione esta linha para bordas arredondadas */
 }
 
-/* Adicione a mesma propriedade para os campos Bootstrap padrão */
-.form-control {
-  border-radius: 8px;
+label {
+  font-weight: bold;
 }
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #02EFFC;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:disabled,
+input[type="email"]:disabled,
+input[type="tel"]:disabled,
+input[type="password"]:disabled {
+  background-color: #003F48;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button-group button {
+  flex-basis: 48%;
+}
+
+/* Add your custom styles for specific elements or components as needed */
+
