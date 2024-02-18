@@ -5,20 +5,20 @@ const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
       navClose = document.getElementById('nav-close');
 
- /* 
-  * Menu Show 
+ /*
+  * Menu Show
   */
- 
+
  if(navToggle) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.add('show-menu');
     });
 }
 
-/* 
- * Menu Hidden 
+/*
+ * Menu Hidden
  */
- 
+
  if(navClose) {
     navClose.addEventListener('click', () => {
         navMenu.classList.remove('show-menu');
@@ -26,7 +26,7 @@ const navMenu = document.getElementById('nav-menu'),
 }
 
 /*========= MENU MOBILE =========*/
- 
+
 const navLink = document.querySelectorAll('.nav_link');
 
 const linkAction = () => {
@@ -35,7 +35,7 @@ const linkAction = () => {
 }
 
 navLink.forEach(n => n.addEventListener('click', linkAction));
- 
+
 /*========= CHANGE BACKGROUND HEADER =========*/
 
 const scrollHeader = () => {
@@ -53,7 +53,7 @@ const popularSwiper = new Swiper('.popular_content', {
     slidesPerView: 'auto',
     centeredSlides: true,
     loop: true,
-  
+
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
@@ -65,7 +65,7 @@ const popularSwiper = new Swiper('.popular_content', {
             centeredSlides: false,
         }
     }
-  
+
   });
 
   /*========= CHOOSE FAQ =========*/
@@ -95,9 +95,9 @@ const popularSwiper = new Swiper('.popular_content', {
 
         faqContent.removeAttribute('style');
         item.classList.remove('faq-open');
-    
+
     } else {
-        
+
         faqContent.style.height = faqContent.scrollHeight + 'px'
         item.classList.add('faq-open')
     }
@@ -117,7 +117,7 @@ window.addEventListener('scroll', scrollUp);
 /*======== Scroll Section Active Link =========*/
 
 const sections = document.querySelectorAll('section[id]');
-    
+
 const scrollActive = () =>{
   	const scrollDown = window.scrollY;
 
@@ -131,39 +131,39 @@ const scrollActive = () =>{
 			sectionsClass.classList.add('active-link');
 		}else{
 			sectionsClass.classList.remove('active-link');
-		}                                                    
+		}
 	})
 }
 window.addEventListener('scroll', scrollActive);
 
 /*============== Dark Theme Mode =============*/
 
-const themeButton = document.getElementById('theme-button')
-const darkTheme = 'dark-theme'
-const iconTheme = 'ri-sun-line'
+const themeButton = document.getElementById('theme-button');
+const darkTheme = 'dark-theme';
+const iconTheme = 'ri-sun-line';
 
 
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
+const selectedTheme = localStorage.getItem('selected-theme');
+const selectedIcon = localStorage.getItem('selected-icon');
 
 
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line'
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line';
 
 
 if (selectedTheme) {
-  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-  themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme)
+  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+  themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme);
 }
 
 
 themeButton.addEventListener('click', () => {
- 
-    document.body.classList.toggle(darkTheme)
-    themeButton.classList.toggle(iconTheme)
-  
-    localStorage.setItem('selected-theme', getCurrentTheme())
-    localStorage.setItem('selected-icon', getCurrentIcon())
+
+    document.body.classList.toggle(darkTheme);
+    themeButton.classList.toggle(iconTheme);
+
+    localStorage.setItem('selected-theme', getCurrentTheme());
+    localStorage.setItem('selected-icon', getCurrentIcon());
 });
 
 /*============== Scroll Reveal =============*/
