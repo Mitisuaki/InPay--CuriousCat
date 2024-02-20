@@ -1,9 +1,10 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-user-home-page-header',
   standalone: true,
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
