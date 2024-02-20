@@ -121,7 +121,18 @@ export class LoginComponent {
     }
   }
 
+  enviarEmailRecuperacao(){
+    if (this.email.trim() !== '' && this.cpf.trim() !==''){
+    alert("E-mail enviado com sucesso!")
+    this.fecharModal();
+    this.ClearInputs();
+    } else {
+      alert("Preencha os campos E-mail e CPF!")
+    }
+  }
+
   fecharModal() {
     this.showTermsModal = false;
+    this.showRecuperatePassword = false;
   }
 }
