@@ -1,0 +1,251 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #161622;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.Error {
+  border: 1px solid red; 
+}
+
+.button-center {
+    display: flex;
+    justify-content: center;
+}
+
+.border-login {
+    margin-top: 50px; 
+    border: 1px solid #fff;  
+}
+
+.page-container {
+    overflow-y: auto;
+    background-color: #003F48;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-container {
+    background-color: #003F48;
+    padding: 10px;
+}
+
+.button-container button {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.button-container button:disabled {
+    background-color: #02EFFC;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.btn-primary {
+    background-color: #02EFFC;
+    color: #fff;
+    width: 100%;
+}
+
+.label-fixed-width {
+    min-width: 150px;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.label-termos {
+    color: #fff;
+    margin-left: 10px;
+}
+
+.custom-checkbox {
+    transform: scale(1.5); 
+    margin-right: 5px; 
+}
+
+.label-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.label-input-container label {
+  margin-bottom: 5px;
+}
+
+.label-input-container input {
+  background-color: #fff;
+  color: #000;
+  width: 100%;
+  max-width: 300px; /* Ajuste conforme necessário */
+  margin: 0 auto;  /* Centraliza o input */
+}
+
+.login-form,
+.cadastro-form {
+    background-color: #003F48;
+    padding: 20px;
+    margin: 2px 0;
+}
+
+.login-form input,
+.cadastro-form input {
+    background-color: #fff;
+    color: #000;
+    margin-bottom: 0px;
+}
+
+.btn-primary {
+    background-color: #02EFFC;
+    color: #fff;
+}
+
+.cadastro-form {
+    overflow-y: auto;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #003F48;
+    color: white;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .terms-and-conditions {
+    max-height: 400px; 
+    overflow-y: auto;
+  }
+
+  .label-termos a {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  .label-termos a:hover {
+    color: red; 
+    text-decoration: underline;
+  }
+  .form-group-center {
+    text-align: center;
+    padding: 10px;
+  }
+.label-password-recuperate {
+    color: white;    
+}   
+.label-password-recuperate a {
+    color: white;    
+    font-weight: bold;
+}   
+.label-password-recuperate a:hover {
+    color: red;    
+    font-weight: bold;
+}   
+
+.password-recuperate {
+    color: #fff;
+  }
+  
+  .password-recuperate h2 {
+    color: #02EFFC; 
+    background-color: #003F48;
+    text-align: center;
+  }
+  
+  .password-recuperate p {
+    color: #fff;
+  }
+  
+  .password-recuperate label {
+    color: #fff;
+  }
+  
+  .password-recuperate input {
+    background-color: #fff;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  
+  .password-recuperate .form-group {
+    display: flex;
+    flex-direction: column;
+    background-color: #003F48;
+    align-items: center;
+  }
+  
+  .modal-content-password {
+    background-color: #003F48;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 8px;
+    position: relative; 
+  }
+
+  .custom-close-button {
+    color: #fff; 
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .custom-close-button:hover {
+    color: red; 
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px; 
+}
+
+.button-group input {
+    width: 200px;   
+}
+
+.button-group-terms {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px; 
+}
+.button-group-terms input {
+    width: 200px;
+}
