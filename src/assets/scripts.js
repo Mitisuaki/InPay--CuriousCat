@@ -1,5 +1,5 @@
-
 /*========= MENU PRINCIPAL ========= */
+function main() {
 
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
@@ -179,3 +179,7 @@ const sr = ScrollReveal({
 sr.reveal(`.home_content, .popular_container, .products_container, .join_bg, .footer_container`);
 sr.reveal(`.home_image, .features_image`, {origin: 'bottom'});
 sr.reveal(`.choose_content, .features_content`, {origin: 'right'});
+
+}
+
+main();

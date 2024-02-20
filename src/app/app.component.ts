@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { LandingPageComponent } from "./components/landing-page/landing-page.component";
 
+
 @Component({
     selector: 'app-root',
     standalone: true,
@@ -11,5 +12,9 @@ import { LandingPageComponent } from "./components/landing-page/landing-page.com
     imports: [CommonModule, RouterOutlet, LandingPageComponent]
 })
 export class AppComponent {
+
+constructor() {
+
+}
 
 }
