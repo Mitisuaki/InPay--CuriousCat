@@ -73,6 +73,25 @@ body {
     margin-right: 5px; 
 }
 
+.label-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.label-input-container label {
+  margin-bottom: 5px;
+}
+
+.label-input-container input {
+  background-color: #fff;
+  color: #000;
+  width: 100%;
+  max-width: 300px; /* Ajuste conforme necessário */
+  margin: 0 auto;  /* Centraliza o input */
+}
+
 .login-form,
 .cadastro-form {
     background-color: #003F48;
@@ -94,7 +113,6 @@ body {
 
 .cadastro-form {
     overflow-y: auto;
-   /* max-height: 300px;  Ajuste a altura máxima conforme necessário */
 }
 
 .modal-overlay {
@@ -140,7 +158,7 @@ body {
   }
   
   .label-termos a:hover {
-    color: red; /* Cor quando o mouse está sobre o link (pode ajustar conforme necessário) */
+    color: red; 
     text-decoration: underline;
   }
   .form-group-center {
@@ -200,13 +218,13 @@ body {
   }
 
   .custom-close-button {
-    color: #fff; /* Cor desejada para o ícone de fechar */
+    color: #fff; 
     font-size: 20px;
     cursor: pointer;
   }
   
   .custom-close-button:hover {
-    color: red; /* Cor quando o mouse está sobre o botão de fechar (pode ajustar conforme necessário) */
+    color: red; 
   }
 
   .button-group {

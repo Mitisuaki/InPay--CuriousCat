@@ -44,6 +44,6 @@ export class LoginComponent {
   
   fecharModal() {
     this.showTermsModal = false;
-    this.location.back(); // Volta para a página anterior
+   // this.location.back(); // Volta para a página anterior
   }
 }
