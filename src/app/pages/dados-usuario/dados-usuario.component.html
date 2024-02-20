@@ -8,11 +8,52 @@
   <title>Dados Pessoais</title>
 </head>
 <body>
+
     <div class="container-Primario">
   <div class="container">
-    <div class="container-Home">
-      <button class="btn btn-outline-light btn-Home" type="button" onclick="cancelEdit()">Voltar</button>
-    </div>
+    
+    <header class="header" id="header">
+      <nav class="nav container">
+          <a href="#" class="nav_logo">
+              <span>
+                 <img src="../assets/img/logo-InPayDefinitive.png" alt="logo_inpay">
+              </span>
+          </a>
+  
+          <div class="nav_menu" id="nav-menu">
+              <ul class="nav_list">
+                  <li class="nav_item">
+                      <a href="#home" class="nav_link active-link">Home</a>
+                  </li>
+                  <li class="nav_item">
+                      <a href="#popular" class="nav_link">Soluções</a>
+                  </li>
+                  <li class="nav_item">
+                      <a href="#choose" class="nav_link">Perguntas</a>
+                  </li>
+                  <li class="nav_item">
+                      <a href="#products" class="nav_link">Products</a>
+                  </li>
+              </ul>
+  
+              <!--btn close-->
+              <div class="nav_close" id="nav-close">
+                  <i class="ri-close-line"></i>
+              </div>
+          </div>
+  
+              <div class="nav_buttons">
+                  <i class="ri-login-box-line change-theme" title="Login"></i>
+                  <i class="ri-moon-line change-theme" id="theme-button"></i>
+  
+                  <!-- btn toggle-->
+                  <div class="nav_toggle" id="nav-toggle">
+                      <i class="ri-menu-line"></i>
+                  </div>
+              </div>
+      </nav>
+   </header>
+  
 
     <form id="infoForm">
         <!-- Nome -->
@@ -47,7 +88,6 @@
         <label for="telefone">Telefone:</label>
         <div class="input-group">
           <input type="tel" class="form-control" id="telefone1" value="(00) 12345-6789" readonly required>
-          <input type="tel" class="form-control" id="telefone2" value="(00) 12345-6789" readonly>
         </div>
       </div>
 
@@ -55,10 +95,9 @@
       <div class="form-group">
         <label for="cep">CEP:</label>
         <div class="input-group">
-          <input type="text" id="CEP" name="CEP" formControlName="CEP" placeholder="Digite o CEP">
           <div class="input-group-append">
-            <button type="submit" id="CheckCEP" (click)="searchCEP()">Verificar CEP</button>
-            <button class="btn btn-warning" type="button" onclick="searchCEP()">Buscar</button>
+            <input type="number" id="CEP" name="CEP" formControlName="CEP" placeholder="Digite o CEP">
+            <button type="submit" id="CheckCEP" class="btn btn-warning" (click)="searchCEP()">Verificar CEP</button>
           </div>
         </div>
       </div>
@@ -112,10 +151,10 @@
       </div>
 
          <!-- Adicione um botão Editar -->
-         <button type="button" class="btn btn-secondary" onclick="enableEdit()">Editar</button>
+         <button type="button" class="btn btn-warning" (click)="enableEdit()">Editar</button>
 
          <!-- Adicione um botão Cancelar -->
-         <button type="button" class="btn btn-danger" onclick="cancelEdit()">Cancelar</button>
+         <button type="submit" class="btn btn-danger" id="cancelBtn"(click)="cancelEdit()" disabled>Cancelar</button>
 
       <!-- Botão Salvar desabilitado inicialmente -->
       <button type="submit" class="btn btn-primary" id="saveBtn" disabled>Salvar</button>
@@ -129,41 +168,5 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-    // Adicione a função para buscar o CEP
-    function searchCEP() {
-      var cep = document.getElementById("cep").value;
-      if (cep.length === 8) {
-        var url = "https://viacep.com.br/ws/" + cep + "/json/";
-
-        fetch(url)
-          .then(response => response.json())
-          .then(data => {
-            document.getElementById("cidade").value = data.localidade;
-            document.getElementById("estado").value = data.uf;
-          })
-          .catch(error => console.error("Erro ao buscar CEP:", error));
-      } else {
-        alert("Digite um CEP válido.");
-      }
-    }
-
-    
-
-    function cancelEdit() {
-      var form = document.getElementById("infoForm");
-      var elements = form.elements;
-
-      for (var i = 0; i < elements.length; i++) {
-        if (elements[i].type !== "button") {
-          elements[i].readOnly = true;
-        }
-      }
-
-      // Desabilita botão "Salvar"
-      var saveBtn = document.getElementById("saveBtn");
-      saveBtn.disabled = true;
-    }
-  </script>
 </body>
 </html>

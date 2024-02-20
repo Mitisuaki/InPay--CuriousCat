@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './tela.component.css'
 })
 export class TelaComponent {
+searchCEP() {
+throw new Error('Method not implemented.');
+}
 
 }
