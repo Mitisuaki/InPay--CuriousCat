@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;1,400&family=Poppins:wght@400;500&display=swap');
+
+
 
 /* Estilo para a barra de navegação */
 .nav_menu {
@@ -25,6 +28,9 @@
 .nav_link {
     text-decoration: none;
     color: #fff; /* Define a cor do texto para branco */
+}
+.nav_link:hover {
+    background-color: #02EFFC;
 }
 
 /* Estilo para os botões na barra de navegação */
@@ -76,6 +82,59 @@
 }
 
 .container{
+    /* Cores dentro do formulário */
     background-color: #161622;
     color: #fff;
+    width: 80%; /* Ajuste a largura conforme necessário (porcentagem ou valor fixo) */
+    max-width: 600px;
+}
+.container-Primario{
+    /* Cores dentro do formulário */
+    background-color: #000000;
+    color: #fff;
+}
+
+
+.nav_logo {
+    color: var(--white-color);
+    font-family: var(--second-font);
+    font-weight: var(--font-medium);
+    transition: color .4s;
+}
+#CheckCEP,
+#editBtn,
+#cancelBtn,
+#saveBtn {
+    margin-right: 10px; /* Ou o valor desejado para o espaçamento entre os botões */
+    background-color: #02EFFC;
+    color: black;
+    border-radius: 15px;
+}
+
+#editBtn:hover {
+    background-color: #c7e642; /* Cor diferente ao passar o mouse sobre o botão Editar */
+}
+
+#cancelBtn:hover {
+    background-color: #c7e642; /* Cor diferente ao passar o mouse sobre o botão Cancelar */
+}
+
+#saveBtn:hover {
+    background-color: #c7e642; /* Cor diferente ao passar o mouse sobre o botão Salvar */
+}
+#CheckCEP:hover {
+    background-color: #c7e642; /* Cor diferente ao passar o mouse sobre o botão Salvar */
+}
+
+.navbar {
+    border-bottom: 1px solid #ccc; /* Adicione a cor desejada para a linha */
+}
+
+/* Outros estilos de exemplo para a navbar (pode variar dependendo do seu código) */
+.navbar-brand {
+    font-size: 24px;
+}
+
+.navbar-nav {
+    font-size: 18px;
 }

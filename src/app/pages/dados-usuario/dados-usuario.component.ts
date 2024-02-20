@@ -62,8 +62,6 @@ enableCancelButton() {
     }
   }
   
-
-
   // Função para cancelar edição
   cancelEdit() {
     const form = document.getElementById("infoForm") as HTMLFormElement;
@@ -86,6 +84,23 @@ enableCancelButton() {
   }
 
   // Eventos do botão salvar
+  enableSaveAction() {
+    // Adiciona um evento de clique ao botão "Salvar"
+    const saveBtn = document.getElementById("saveBtn") as HTMLButtonElement | null;
+  
+    if (saveBtn) {
+      saveBtn.addEventListener("click", this.handleSaveClick);
+    }
+  }
+  
+  handleSaveClick() {
+    // Simula uma operação de salvamento bem-sucedida
+    // Aqui você poderia fazer uma requisição assíncrona para salvar os dados no servidor
+    // e exibir a mensagem somente após a conclusão bem-sucedida da operação.
+  
+    // Exibe a mensagem
+    alert("Dados salvos com sucesso!");
+  }
   
   
 }
