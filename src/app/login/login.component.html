@@ -1,24 +1,27 @@
 <div class="page-container">
     <div class="border-login">
         <div class="button-container button-center">
-            <button [disabled]="isButtonLoginDisabled" (click)="disableButton(1)">Login</button>
-            <button [disabled]="isButtonCadastroDisabled" (click)="disableButton(2)">Cadastre-se</button>
+            <button [disabled]="isButtonLoginDisabled" (click)="disableButton(1)" (click)="ClearInputs()">Login</button>
+            <button [disabled]="isButtonCadastroDisabled" (click)="disableButton(2)"
+                (click)="ClearInputs()">Cadastre-se</button>
         </div>
         <!-- Formulario de login-->
         <form *ngIf="showLoginForm" class="login-form">
             <div class="form-group">
                 <div class="label-input-container">
-                <label class="label-fixed-width">Informe seu CPF</label>
-                <input type="text" placeholder="" inputmode="numeric" required pattern="[0-9]*"
-                    oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                    <label class="label-fixed-width">Informe seu CPF</label>
+                    <input type="tel" mask="000.000.000-00" name="cpf" [(ngModel)]="cpf" (blur)="verificarCamposLogin()"
+                        [ngClass]="{ 'Error': cpfIsEmpty }" />
+
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="label-input-container">
-                <label class="label-fixed-width">Informe sua Senha</label>
-                <input type="password" placeholder="" required>
-            </div>
+                    <label class="label-fixed-width">Informe sua Senha</label>
+                    <input type="password" placeholder="" name="password" required [(ngModel)]="password"
+                        [ngClass]="{'Error': passwordIsEmpty }" />
+                </div>
             </div>
             <div class="form-group-center">
                 <input type="checkbox" id="save-password" name="save-password" class="custom-checkbox">
@@ -42,12 +45,13 @@
                             <p>Informe os dados para recuperar a senha.</p>
                             <div class="form-group">
                                 <label class="label-fixed-width">Informe seu E-mail</label>
-                                <input type="email" placeholder="" required>
+                                <input type="email" placeholder="" required name="email" [(ngModel)]="email"
+                                    (blur)="verificaCamposRecuperarSenha()" [ngClass]="{ 'Error': emailIsEmpty }" />
                             </div>
                             <div class="form-group">
                                 <label class="label-fixed-width">Informe seu CPF</label>
-                                <input type="text" placeholder="" inputmode="numeric" required pattern="[0-9]*"
-                                    oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                                <input type="tel" mask="000.000.000-00" name="cpf" [(ngModel)]="cpf"
+                                    (blur)="verificaCamposRecuperarSenha()" [ngClass]="{ 'Error': cpfIsEmpty }" />
                             </div>
                             <div class="form-group button-group">
                                 <input type="button" value="Enviar" class="btn btn-primary" (click)="fecharModal()">
@@ -58,7 +62,7 @@
             </div>
 
             <div class="form-group">
-                <input type="submit" value="Acessar a Conta" class="btn btn-primary">
+                <input type="submit" value="Acessar a Conta" class="btn btn-primary" (click)="verificarSenha()">
             </div>
         </form>
 
@@ -66,50 +70,56 @@
         <form *ngIf="showCadastroForm" class="cadastro-form">
             <div class="form-group">
                 <div class="label-input-container">
-                <label class="label-fixed-width">Nome Completo</label>
-                <input placeholder="" required>
+                    <label class="label-fixed-width">Nome Completo</label>
+                    <input type="text" placeholder="" required name="name" [(ngModel)]="name"
+                        (blur)="verificarCamposCadastro()" [ngClass]="{ 'Error': nameIsEmpty }" />
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="label-input-container">
-                <label class="label-fixed-width">CPF</label>
-                <input type="text" placeholder="" inputmode="numeric" required pattern="[0-9]*"
-                    oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                    <label class="label-fixed-width">CPF</label>
+                    <input type="tel" mask="000.000.000-00" name="cpf" [(ngModel)]="cpf"
+                        (blur)="verificarCamposCadastro()" [ngClass]="{ 'Error': cpfIsEmpty }" />
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="label-input-container">
-                <label class="label-fixed-width">Telefone</label>
-                <input type="text" placeholder="" inputmode="numeric">
-            </div>
-            </div>
-
-            <div class="form-group">
-                <div class="label-input-container">
-                <label class="label-fixed-width">E-mail</label>
-                <input type="email" placeholder="" required>
-            </div>
+                    <label class="label-fixed-width">Telefone</label>
+                    <input type="tel" mask="(00) 00000-0000" name="fone" [(ngModel)]="fone"
+                        (blur)="verificarCamposCadastro()" [ngClass]="{ 'Error': foneIsEmpty }" />
+                </div>
             </div>
 
             <div class="form-group">
                 <div class="label-input-container">
-                <label class="label-fixed-width">Senha</label>
-                <input type="password" placeholder="" required>
-            </div>
+                    <label class="label-fixed-width">E-mail</label>
+                    <input type="email" placeholder="" required name="email" [(ngModel)]="email"
+                        (blur)="verificarCamposCadastro()" [ngClass]="{ 'Error': emailIsEmpty }" />
+                </div>
             </div>
 
             <div class="form-group">
                 <div class="label-input-container">
-                <label class="label-fixed-width">Confirme sua Senha</label>
-                <input type="password" placeholder="" required>
+                    <label class="label-fixed-width">Senha</label>
+                    <input type="password" placeholder="" required name="password" required [(ngModel)]="password"
+                        (blur)="verificarCamposCadastro()" [ngClass]="{ 'Error': passwordIsEmpty }" />
+                </div>
             </div>
-            </div>
-
 
             <div class="form-group">
-                <input type="checkbox" id="aceitar-termos" name="aceitar-termos" class="custom-checkbox">
+                <div class="label-input-container">
+                    <label class="label-fixed-width">Confirme sua Senha</label>
+                    <input type="password" placeholder="" required name="repeatPassword" required
+                        [(ngModel)]="repeatPassword" (blur)="verificarCamposCadastro()"
+                        [ngClass]="{ 'Error': repeatPasswordIsEmpty }" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="aceitar-termos" name="aceitar-termos" class="custom-checkbox"
+                    [(ngModel)]="aceitouTermos">
                 <label for="aceitar-termos" class="label-termos">
                     Li e concordo com os <a (click)="showTermsModal = true">termos e condições.</a>
                 </label>
@@ -164,7 +174,7 @@
             </div>
 
             <div class="form-group">
-                <input type="submit" value="Criar Conta" class="btn btn-primary">
+                <input type="submit" value="Criar Conta" class="btn btn-primary" (click)="cadastrar()">
             </div>
         </form>
     </div>

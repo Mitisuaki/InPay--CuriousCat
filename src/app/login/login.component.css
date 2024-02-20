@@ -12,6 +12,10 @@ body {
     padding: 0;
 }
 
+.Error {
+  border: 1px solid red; 
+}
+
 .button-center {
     display: flex;
     justify-content: center;
