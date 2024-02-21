@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 
+// função para rodar o arquivo script.js
 declare function main():void;
 
 @Component({
@@ -13,10 +14,9 @@ declare function main():void;
   styleUrl: './landing-page.component.css'
 })
 export class LandingPageComponent implements OnInit {
-  constructor() {
 
-  }
   ngOnInit(): void {
+    // Função para rodar arquivo script.js
     main();
   }
 }
