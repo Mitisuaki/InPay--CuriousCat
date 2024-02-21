@@ -1,0 +1,41 @@
+
+.table-container{
+  background-color:lightblue;
+  width: 100%;
+}
+
+.table {
+  border-style:unset;
+}
+
+.table th{
+  font-size: smaller;
+}
+
+.table td{
+  font-size:x-small;
+}
+
+/* HOVER */
+.table:hover{
+  cursor: default;
+}
+
+.action:hover{
+  text-decoration:underline;
+  text-decoration-color:lightblue ;
+  color: lightblue;
+  cursor:pointer;
+}
+
+.h4:hover{
+  cursor: default;
+}
+
+.modal{
+  background-color: rgba(0,0,0,0);
+  margin: auto;
+
+
+}
+
