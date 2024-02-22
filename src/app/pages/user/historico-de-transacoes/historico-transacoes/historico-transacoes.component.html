@@ -1,0 +1,51 @@
+      <div class="table-responsive-sm">
+        <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Data</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Status</th>
+            <th scope="col">Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let transaction of transactions; index as i">
+            <th scope="row">{{i}}</th>
+            <td>{{ transaction.nome }}</td>
+            <td>{{ transaction.data }}</td>
+            <td>R${{ transaction.valor }}</td>
+            <td>{{ transaction.transaction_status }}</td>
+            <!-- <td class="action overlay">{{ transaction.acao }}</td> -->
+            <td class="action" data-bs-toggle="modal" [attr.data-bs-target]="'#myModal' + i">
+              Detalhes
+            </td>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal{{i}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Detalhes</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>ID: {{transaction.transaction_id}}</p>
+                   <p>Nome: {{transaction.nome}}</p>
+                   <p>Data: {{transaction.data}}</p>
+                   <p>Valor: R${{transaction.valor}}</p>
+                   <p>Status: {{transaction.transaction_status}}</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Baixar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </tr>
+        </tbody>
+        </table>
+
+    </div>
