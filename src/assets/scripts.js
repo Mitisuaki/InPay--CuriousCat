@@ -142,14 +142,11 @@ const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'ri-sun-line'
 
-
 const selectedTheme = localStorage.getItem('selected-theme')
 const selectedIcon = localStorage.getItem('selected-icon')
 
-
 const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
 const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line'
-
 
 if (selectedTheme) {
   document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
@@ -178,6 +175,28 @@ const sr = ScrollReveal({
 sr.reveal(`.home_content, .popular_container, .products_container, .join_bg, .footer_container`);
 sr.reveal(`.home_image, .features_image`, {origin: 'bottom'});
 sr.reveal(`.choose_content, .features_content`, {origin: 'right'});
+
+
+/* ========== LOGIN AREA =========== */
+
+const loginButton = document.getElementById('login-button'),
+      loginClose = document.getElementById('login-close'),
+      loginContent = document.getElementById('login-content');
+
+if(loginButton){
+        loginButton.addEventListener('click', () =>{
+        loginContent.classList.add('show-login');
+    });
+}
+
+/*
+* Trocar para loginContent.classList.remove('show-login');
+*/
+if(loginClose){
+        loginClose.addEventListener('click', () =>{
+        loginContent.classList.remove('show-login');
+    });
+}
 
 }
 
