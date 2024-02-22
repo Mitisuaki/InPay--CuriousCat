@@ -19,7 +19,7 @@ export class CadastroUsuarioComponent {
     name: new FormControl('', [Validators.required ,Validators.pattern(/^[a-z ,.'-]+$/i)]),
     cpf: new FormControl('', [Validators.required, Validators.pattern(/^\d{3}\d{3}\d{3}\d{2}$/)]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    celular: new FormControl('', [Validators.required, Validators.minLength(9),] ),
+    celular: new FormControl('', [Validators.required, Validators.minLength(9), Validators.maxLength(9)] ),
     data_nascimento: new FormControl('', [Validators.required, Validators.pattern(/^\d{2}\/\d{2}\/\d{4}/)]),
     senha: new FormControl('', [Validators.required]),
     confirmarSenha: new FormControl('', [Validators.required]),

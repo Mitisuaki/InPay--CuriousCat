@@ -31,9 +31,10 @@
         </div>
 
         <div class="form-floating">
-        <input type="number" id="celular" class="form-control-sm" formControlName="celular" placeholder="(11) 9 4002-8922" class="form-control">
+        <input type="texto" id="celular" class="form-control-sm" formControlName="celular" placeholder="94002-8922" class="form-control">
         <label class="form-label" for="celular">Celular</label>
         <p *ngIf="formulario.get('celular')?.hasError('required')">Informe seu numero de celular</p>
+        <p *ngIf="formulario.get('celular')?.hasError('pattern')">Informe um numero válido</p>
         </div>
 
         <div class="form-floating">
