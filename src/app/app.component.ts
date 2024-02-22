@@ -12,6 +12,6 @@ import { SidebarComponent } from './pages/user/historico-de-transacoes/sidebar/s
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'InPay | A fintch feita para você';
+  title = 'InPay | A fintech feita para você';
 
 }
