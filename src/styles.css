@@ -116,3 +116,29 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+/*================= Base Class ================*/
+
+.main {
+  overflow: hidden; /* Para animacao Reveal */
+}
+
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 5rem 1rem;
+}
+
+.section_title {
+  font-size: var(--big-font-size);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}

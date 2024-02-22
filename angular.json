@@ -31,7 +31,8 @@
             "scripts": [
               "node_modules/swiper/swiper-bundle.min.js",
               "node_modules/scrollreveal/dist/scrollreveal.min.js",
-              "src/assets/scripts.js"
+              "src/assets/scripts.js",
+              "src/assets/formModal.js"
             ]
           },
           "configurations": {

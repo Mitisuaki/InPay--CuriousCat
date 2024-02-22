@@ -1,0 +1,133 @@
+/* ======== login ========== */
+
+.login {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-fixed);
+  background-color: hsla(240, 60%, 95%, 0.6);
+  backdrop-filter: blur(25px);
+  align-items: center;
+  padding: 1.5rem;
+  text-align: center;
+  transition: top .4s;
+}
+
+.login_form {
+  background-color: var(--container-color);
+  padding: 2rem 1.5rem;
+  border: 2px solid var(--primary-color-alt);
+  border-radius: 10px;
+  row-gap: 1.25rem;
+}
+
+.login_title {
+  font-size: var(--h2-font-size);
+}
+
+.login_group {
+  row-gap: 1.25rem;
+}
+
+.login_label {
+  display: block;
+  text-align: initial;
+  color: var(--primary-color-alt);
+  font-weight: var(--font-medium);
+  margin-bottom: .25rem;
+}
+
+.login_input {
+  width: 100%;
+  background-color: var(--container-color);
+  border-bottom: 2px solid var(--primary-color-alt);
+  padding: 1rem;
+  color: var(--title-color);
+}
+
+.login_input:hover {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+input[type='email'],
+input[type='password'] {
+  caret-color: var(--primary-color-alt);
+}
+
+
+.login_signup,
+ .login_forgot {
+  display: block;
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+}
+
+.login_signup {
+  margin-bottom: .5rem;
+}
+
+.login_signup a {
+  color: var(--primary-color);
+  font-weight: var(--font-medium);
+}
+
+.login_forgot {
+  color: var(--primary-color);
+  margin-bottom: 1.25rem;
+}
+
+.login_button {
+  width: 100%;
+  cursor: pointer;
+}
+
+.login_close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: var(--primary-color-alt);
+  cursor: pointer;
+}
+
+/* show login */
+.show-login {
+  top: 0;
+}
+
+/* =========== Button ============= */
+
+.button {
+  display: inline-block;
+  background-color: #407a7d;
+  color: var(--white-color);
+  font-weight: var(--font-semibold);
+  padding: 1rem 1.5rem;
+  border: 20px;
+  transition: box-shadow .4s;
+}
+
+.button:hover {
+  box-shadow: 0 4px 32px hsla(230, 72%, 32%, .4);
+}
+
+/*=============== BREAKPOINTS =================*/
+
+@media screen and (min-width: 576px) {
+
+  .login_form {
+      width: 400px;
+      justify-self: center;
+  }
+
+   .login_close {
+      width: max-content;
+      top: 4rem;
+      left: 0;
+      right: 0;
+      margin-inline: auto;
+  }
+
+}
