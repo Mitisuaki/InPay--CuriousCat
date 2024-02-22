@@ -1,22 +1,47 @@
-<nav class="nav container-fluid p-2 border-bottom border-black border-2 pb-0">
-
-
-  <div id="nav-menu" class="container-fluid border d-flex justify-content-between align-items-end ps-0 pe-0">
-    <div class="nav-user">
-      <div class="nav-list d-flex align-items-end">
-        <a href="user/home-page" class="nav_logo me-2">
-          <img id="nav-logo" ngSrc="./assets/user-home-page/logo-InPay.png" width="80" height="40" alt="logo_inpay">
-        </a>
-        <div id="user" class="d-flex align-items-end">
-          <img ngSrc="./assets/user-home-page/user.png" width="30" height="30" alt="foto_usuario">
-          <a>Olá, Usuario</a>
-        </div>
+<div class="header" id="header">
+  <nav class="nav container-fluid ps-4 pe-4  ">
+    <div class="d-flex justify-content-center align-content-center align-items-center">
+      <a href="user/home-page" class="nav_logo ">
+        <span>
+          <img ngSrc="assets/user-home-page/logo-InPay-branco.png" alt="logo_inpay" width="80" height="42" priority/>
+        </span>
+      </a>
+      <div class="text-white ms-4 d-flex align-items-center">
+        <img class="rounded-circle" id="user-photo" ngSrc="assets/user-home-page/Fran Coimbra.png" width="40" height="40" alt="User_photo">
+        <div id="user-name" class="ms-3">Olá, Fran Coimbra</div>
       </div>
     </div>
 
-    <div class="nav-btns">
-      <a class="btn ri-login-box-line change-theme" title="Login">Tema</a>
-      <a class="btnri-moon-line change-theme" id="theme-button">Log off</a>
-    </div>
-  </div>
-</nav>
+      <div class="nav_menu pt-3 " id="nav-menu">
+          <ul class="nav_list">
+              <li class="nav_item ">
+                  <a href="user/home-page" class="nav_link">Início</a>
+              </li>
+              <li class="nav_item">
+                  <a href="#popular" class="nav_link">Meu Cartão</a>
+              </li>
+              <li class="nav_item">
+                  <a href="#choose" class="nav_link">Investimentos</a>
+              </li>
+              <li class="nav_item">
+                  <a href="#products" class="nav_link">Configurações</a>
+              </li>
+          </ul>
+      </div>
+
+          <div class="nav_buttons">
+              <!-- login button-->
+              <i class="ri-logout-box-line change-theme" id="logoff-button" title="logoff"></i>
+              <!-- theme button-->
+              <i class="ri-moon-line change-theme" id="theme-button" (click)="changeDarkLightMode($event)"></i>
+
+              <!-- btn toggle-->
+              <div class="nav_toggle" id="nav-toggle">
+                  <i class="ri-menu-line" (click)="sandwichButton()" ClickOutside (clickedOutside)="closeMenu()"></i>
+              </div>
+          </div>
+  </nav>
+</div>
+<div class="spacer">
+  &nbsp;
+</div>
