@@ -16,7 +16,7 @@ import { HeaderComponent } from "../header/header.component";
 export class CadastroUsuarioComponent {
   // formulário
   formulario = new FormGroup({
-    name: new FormControl('', [Validators.required ,Validators.pattern('^[a-zA-Z0-9_-]{4,20}$')]),
+    name: new FormControl('', [Validators.required ,Validators.pattern(/^[a-z ,.'-]+$/i)]),
     cpf: new FormControl('', [Validators.required, Validators.pattern(/^\d{3}\d{3}\d{3}\d{2}$/)]),
     email: new FormControl('', [Validators.required, Validators.email]),
     celular: new FormControl('', [Validators.required, Validators.minLength(9),] ),
