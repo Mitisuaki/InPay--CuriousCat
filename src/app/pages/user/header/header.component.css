@@ -91,7 +91,7 @@
   row-gap: 2rem;
 }
 
-.nav_link {
+.nav_link{
   color: var(--text-color);
 }
 
@@ -100,6 +100,13 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: var(--primary-color);
+}
+
+#user-name:hover {
+  color: var(--primary-color);
+}
+#user-photo:hover {
+  outline: 2px solid var(--primary-color);
 }
 
 .nav_close {
