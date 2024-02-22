@@ -50,7 +50,7 @@
 
 /*================= TIPOGRAFIA RESPONSIVA ================*/
 
-@media screen and (min-width: 1152px) {
+@media screen and (min-width: 1165px) {
     :root {
         --bigger-font-size: 4rem;
         --big-font-size: 3.5rem;
@@ -79,4 +79,84 @@
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: hsl(0, 0%, 55%);
+}
+
+/*================= Base ================*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input,
+button,
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: background .4s;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+ h4 {
+  color: var(--title-color);
+  font-family: var(--second-font);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*================= Base Classes ================*/
+
+.main {
+  overflow: hidden; /* Para animacao Reveal */
+}
+
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 5rem 1rem;
+}
+
+.section_title {
+  font-size: var(--big-font-size);
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
