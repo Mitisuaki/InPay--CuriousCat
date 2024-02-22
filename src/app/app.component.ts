@@ -12,5 +12,5 @@ import { SidebarComponent } from './pages/user/historico-de-transacoes/sidebar/s
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'CuriousCat-Bank';
+  title = 'InPay | A fintch feita para você';
 }
