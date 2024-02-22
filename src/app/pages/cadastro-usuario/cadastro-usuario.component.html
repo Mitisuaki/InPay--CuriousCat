@@ -1,0 +1,59 @@
+<app-header></app-header>
+<main class="mt-2 container-fluid d-flex flex-column align-items-center ps-0">
+
+      <div class="container">
+        <form [formGroup]="formulario" (submit)="autenticar()" novalidate class="formulario-cadastro">
+          <div class="titulo">
+            <h2>Cadastre-se</h2>
+          </div>
+
+        <div class="form-floating">
+          <input type="text" id="name" class="form-control-sm" formControlName="name" placeholder="Usuário" class="form-control">
+          <label class="form-label" for="name">Nome</label>
+        </div>
+
+        <div class="form-floating">
+        <input type="number" id="cpf" class="form-control-sm"
+        formControlName="cpf" placeholder="123.456.789-10" class="form-control">
+        <label class="form-label" for="cpf">CPF</label>
+        </div>
+
+        <div class="form-floating">
+        <input type="email" id="email" class="form-control-sm" formControlName="email" placeholder="usuario@mail.com" class="form-control">
+        <label class="form-label" for="email">Email</label>
+        </div>
+
+        <div class="form-floating">
+        <input type="celular" id="celular" class="form-control-sm" formControlName="celular" placeholder="(11) 9 4002-8922" class="form-control">
+        <label class="form-label" for="celular">Celular</label>
+        </div>
+
+        <div class="form-floating">
+        <input type="" id="data_nascimento" class="form-control-sm" formControlName="data_nascimento" placeholder="13/06/1995" class="form-control">
+        <label class="form-label" for="data_nascimento">Data de nascimento</label>
+        </div>
+
+        <div class="form-floating">
+        <input type="password"  id="senha" class="form-control-sm" formControlName="senha" placeholder="******"  class="form-control">
+        <label class="form-label" for="senha">Senha</label>
+        </div>
+
+        <div class="form-floating">
+        <input type="password" id="confirmarSenha"  class="form-control-sm" formControlName="confirmarSenha" placeholder="******"  class="form-control">
+        <label class="form-label" for="confirmarSenha">Confirme sua senha</label>
+        <p class="mensagem-de-erro">{{mensagem}}</p>
+        </div>
+
+
+        <input type="submit" value="Cadastrar" class="btn btn-primary">
+        </form>
+    </div>
+
+  </main>
+<footer>
+    <app-user-home-page-footer></app-user-home-page-footer>
+  </footer>
+
+
+
+

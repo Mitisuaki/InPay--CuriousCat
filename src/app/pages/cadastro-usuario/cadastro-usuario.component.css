@@ -1,0 +1,26 @@
+.form-floating{
+  margin: 10px;
+}
+
+.container{
+  margin-top: 10;
+}
+label{
+  font-size:small;
+}
+
+.titulo{
+  text-align: center;
+}
+.container{
+margin-top: 5rem;
+}
+
+.formulario-cadastro{
+  padding: 50px;
+}
+.mensagem-de-erro{
+  color:crimson;
+  font-size: x-small;
+}
+
