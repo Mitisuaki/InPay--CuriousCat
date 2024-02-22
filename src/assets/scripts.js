@@ -189,9 +189,6 @@ if(loginButton){
     });
 }
 
-/*
-* Trocar para loginContent.classList.remove('show-login');
-*/
 if(loginClose){
         loginClose.addEventListener('click', () =>{
         loginContent.classList.remove('show-login');
