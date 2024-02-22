@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { UserHomePageHeaderComponent } from '../header/header.component';
 import { UserHomePageMainComponent } from './main/main.component';
-import { UserHomePageFooterComponent } from '../footer/footer.component';
+import { UserHomePageFooterComponent } from '../../footer/footer.component';
 
 
 @Component({
