@@ -1,33 +1,83 @@
-<div class="container-fluid border d-flex">
 
-    <nav class="border-end border-black col-2">
-      <ul>
-        <li>Início</li>
-        <li>Meu Cartão</li>
-        <li>Investimentos</li>
-        <li>Configurações</li>
 
-      </ul>
-    </nav>
+<div class="container-fluid d-flex main mb-5">
 
-    <div class="ms-2 mt-2">
+    <div class="mt-2 container-fluid d-flex flex-column align-items-center ps-0">
 
-      <div class="border bg-black rounded-pill text-white ps-3 pe-3 ">
-        <h4 class="mb-0">Saldo Disponivel</h4>
-        <a>120121317316731,12818</a>
+      <div class="d-flex justify-content-between container-fluid mb-5 mt-3" id="balance-area">
+        <div class="rounded-pill text-white ps-3 pe-3" id="balance-box1">
+          <h4 class="mb-0 text-white">Saldo Disponivel Débito</h4>
+          <div class="d-flex justify-content-between">
+            <span id="balance-value" class="ps-2">120121317316731,12818</span>
+            <i id="privacy" class="ri-eye-close-line ri-eye-line" (click)="togglePrivacy()"></i>
+          </div>
+        </div>
+        <div class="rounded-pill text-white ps-3 pe-3" id="balance-box2">
+          <h4 class="mb-0 text-white">Saldo Disponivel Crédito</h4>
+          <div class="d-flex justify-content-between">
+            <span id="balance-value" class="ps-2">120121317316731,12818</span>
+            <i id="privacy" class="ri-eye-close-line ri-eye-line" (click)="togglePrivacy()"></i>
+          </div>
+        </div>
       </div>
 
 
-      <ul>
-        <li>Minhas Finanças</li>
-        <li>Transferências</li>
-        <li>Recaregar Celular</li>
-        <li>Cartão de crédito</li>
-        <li>Pagamentos</li>
-        <li>Pix</li>
-        <li>Extrato</li>
-        <li>Investimentos</li>
-        <li>Empréstimos</li>
+      <ul class="d-grid second-font container-fluid justify-content-around" id="operations">
+        <li class="d-flex flex-column justify-content-center align-items-center">
+          <a id="operations-items" class="rounded-circle d-flex justify-content-center align-items-center">
+            <i class="ri-article-line"></i>
+          </a>
+          <span>Minhas Finanças</span>
+        </li>
+        <li class="d-flex flex-column justify-content-center align-items-center">
+          <a id="operations-items" class="rounded-circle d-flex justify-content-center align-items-center">
+            <i class="ri-arrow-left-right-line"></i>
+          </a>
+          <span>Transferências</span>
+        </li>
+        <li class="d-flex flex-column justify-content-center align-items-center">
+          <a id="operations-items" class="rounded-circle d-flex justify-content-center align-items-center">
+            <i class="ri-smartphone-line"></i>
+          </a>
+          <span>Recaregar Celular</span>
+        </li>
+        <li class="d-flex flex-column justify-content-center align-items-center">
+          <a id="operations-items" class="rounded-circle d-flex justify-content-center align-items-center">
+            <i class="ri-bank-card-line"></i>
+          </a>
+          <span>Cartão de crédito</span>
+        </li>
+        <li class="d-flex flex-column justify-content-center align-items-center">
+          <a id="operations-items" class="rounded-circle d-flex justify-content-center align-items-center">
+            <i class="ri-bill-fill"></i>
+          </a>
+          <span>Pagamentos</span>
+        </li>
+        <li class="d-flex flex-column justify-content-center align-items-center">
+          <a id="operations-items" class="rounded-circle d-flex justify-content-center align-items-center">
+            <i class="fa-brands fa-pix"></i>
+          </a>
+          <span>Pix</span>
+        </li>
+        <li class="d-flex flex-column justify-content-center align-items-center">
+          <a id="operations-items" class="rounded-circle d-flex justify-content-center align-items-center">
+            <i class="ri-file-list-3-line"></i>
+          </a>
+          <span>Extrato</span>
+        </li>
+        <li class="d-flex flex-column justify-content-center align-items-center">
+          <a id="operations-items" class="rounded-circle d-flex justify-content-center align-items-center">
+            <i class="ri-line-chart-line"></i>
+          </a>
+          <span>Investimentos</span>
+        </li>
+        <li class="d-flex flex-column justify-content-center align-items-center">
+          <a id="operations-items" class="rounded-circle d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-sack-dollar"></i>
+          </a>
+          <span>Empréstimos</span>
+        </li>
+
       </ul>
 
     </div>
