@@ -1,3 +1,17 @@
+@media screen and (min-width: 1165px) {
+  :root {
+      --bigger-font-size: 4rem;
+      --big-font-size: 3.5rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-big-font-size: 1.125rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+  }
+}
+
 .spacer
 {
     width: 100%;
@@ -209,3 +223,5 @@ body.dark-theme {
       width: 50px;
     }
   }
+
+
