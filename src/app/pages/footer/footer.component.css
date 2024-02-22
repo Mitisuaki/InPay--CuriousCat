@@ -90,7 +90,7 @@
 }
 
 .footer_group {
-  margin-top: 4rem;
+  margin-top: 3rem;
   flex-direction: column;
   align-items: center;
   row-gap: 1rem;
@@ -195,7 +195,7 @@
   }
 
   .footer_group {
-      margin-top: 6.5rem;
+      margin-top: 4rem;
   }
 
   .scrollup {
