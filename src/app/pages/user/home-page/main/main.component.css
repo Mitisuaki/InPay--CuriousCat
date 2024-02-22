@@ -79,7 +79,7 @@
   row-gap: 2.5em;
 }
 
-@media screen and (max-width: 745px) {
+@media screen and (max-width: 745px) and (min-width: 0px) {
 
   #balance-box1, #balance-box2{
     padding-left: 20px ;
