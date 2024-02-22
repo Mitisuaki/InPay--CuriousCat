@@ -6,13 +6,13 @@
       </a>
       <div>
         <a href="user/home-page" class="text-white ms-4 d-flex align-items-center">
-          <img class="rounded-circle" id="user-photo" ngSrc="assets/user-home-page/Fran Coimbra.png" width="40" height="40" alt="User_photo">
-          <div id="user-name" class="ms-3">Olá, Fran Coimbra</div>
+          <img class="rounded-circle" id="user-photo" ngSrc="assets/user-home-page/Fran Coimbra.png" width="40" height="40" alt="User_photo" title="user">
+          <div id="user-name" class="ms-3" title="user">Olá, Fran Coimbra</div>
         </a>
       </div>
     </div>
 
-      <div class="nav_menu  " id="nav-menu">
+      <div class="nav_menu pt-3 " id="nav-menu">
           <ul class="nav_list">
               <li class="nav_item ">
                   <a href="user/home-page" class="nav_link">Início</a>
@@ -30,7 +30,7 @@
               <!-- login button-->
               <a href="/" class="ri-logout-box-line change-theme" id="logoff-button" title="logoff"></a>
               <!-- theme button-->
-              <i class="ri-moon-line change-theme" id="theme-button" (click)="changeDarkLightMode($event)"></i>
+              <i class="ri-moon-line change-theme" id="theme-button" title="change_theme" (click)="changeDarkLightMode($event)"></i>
 
               <!-- btn toggle-->
               <div class="nav_toggle" id="nav-toggle">
