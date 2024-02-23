@@ -610,11 +610,17 @@ background-color: hsl(196, 57%, 50%);
 
 .join_button {
   padding-block: 1.1rem;
+  background-color: var(--title-color);
+  color: var(--primary-color);
   cursor: pointer;
 }
 
 .join_description {
 color: var(--title-color);
+}
+
+.section_title .ri-rocket-2-line {
+  font-size: 5rem;
 }
 
 /*================= Footer ================*/
