@@ -1,0 +1,88 @@
+<app-header></app-header>
+<main class="mt-2 container-fluid d-flex flex-column align-items-center ps-0">
+      <div class="container">
+
+        <!-- FORMULARIO DE CADASTRO -->
+        <form [formGroup]="formulario" (submit)="autenticar()" novalidate class="formulario-cadastro">
+          <div class="titulo">
+            <h2>Cadastre-se</h2>
+          </div>
+
+          <!-- NOME -->
+        <div class="form-floating">
+          <input  (input)="inputChanged('input_nome',$event)" type="text" id="name" class="form-control-sm" formControlName="name" placeholder="Usuário" class="form-control">
+          <label class="form-label" for="name">Nome</label>
+          <div *ngIf="inputValues['input_nome'] !== ''">
+          <p *ngIf="formulario.get('name')?.hasError('pattern')">Informe um nome válido</p>
+          </div>
+        </div>
+
+        <!-- CPF -->
+        <div class="form-floating">
+        <input (input)="inputChanged('input_cpf',$event)" type="text" id="cpf" class="form-control-sm"
+        formControlName="cpf" placeholder="123.456.789-10" class="form-control">
+        <label class="form-label" for="cpf">CPF</label>
+        <div *ngIf="inputValues['input_cpf'] !== ''">
+        <p *ngIf="formulario.get('cpf')?.hasError('pattern')">Informe um CPF válido</p>
+        </div>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="form-floating">
+        <input (input)="inputChanged('input_email',$event)" type="email" id="email" class="form-control-sm" formControlName="email" placeholder="usuario@mail.com" class="form-control">
+        <label class="form-label" for="email">Email</label>
+        <div *ngIf="inputValues['input_email'] !== ''">
+        <p *ngIf="formulario.get('email')?.hasError('required')">Informe e-mail</p>
+        <p *ngIf="formulario.get('email')?.hasError('email')">Informe um e-mail válido</p>
+        </div>
+        </div>
+
+        <!-- CELULAR -->
+        <div class="form-floating">
+        <input (input)="inputChanged('input_celular',$event)" type="texto" id="celular" class="form-control-sm" formControlName="celular" placeholder="94002-8922" class="form-control">
+        <label class="form-label" for="celular">Celular</label>
+        <div *ngIf="inputValues['input_celular'] !== ''">
+        <p *ngIf="formulario.get('celular')?.hasError('required')">Informe seu numero de celular</p>
+        <p *ngIf="formulario.get('celular')?.hasError('pattern')">Informe um numero válido</p>
+        </div>
+        </div>
+
+        <!-- DATA DE NASCIMENTO -->
+        <div class="form-floating">
+        <input (input)="inputChanged('input_data',$event)" type="text" id="data_nascimento" class="form-control-sm" formControlName="data_nascimento" placeholder="13/06/1995" class="form-control">
+        <label class="form-label" for="data_nascimento">Data de nascimento</label>
+        <div *ngIf="inputValues['input_data'] !== ''">
+        <p *ngIf="formulario.get('data_nascimento')?.hasError('required')">Informe sua data de nascimento</p>
+        <p *ngIf="formulario.get('data_nascimento')?.hasError('pattern')">Informe data de nascimento válida</p>
+        </div>
+        </div>
+
+        <!-- SENHA -->
+        <div class="form-floating">
+        <input type="password"  id="senha" class="form-control-sm" formControlName="senha" placeholder="******"  class="form-control">
+        <label class="form-label" for="senha">Senha</label>
+        </div>
+
+        <!-- CONFIRMAÇÃO DE SENHA -->
+        <div class="form-floating">
+        <input type="password" id="confirmarSenha"  class="form-control-sm" formControlName="confirmarSenha" placeholder="******"  class="form-control">
+        <label class="form-label" for="confirmarSenha">Confirme sua senha</label>
+        <p class="mensagem-de-erro">{{mensagem}}</p>
+        </div>
+
+
+        <div class="pe-2 d-flex justify-content-end">
+          <input type="submit" value="Cadastrar" class="btn btn-primary " [disabled]="formulario.invalid">
+        </div>
+        </form>
+
+    </div>
+
+  </main>
+<footer>
+    <app-user-home-page-footer></app-user-home-page-footer>
+  </footer>
+
+
+
+

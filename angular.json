@@ -25,9 +25,17 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/swiper/swiper-bundle.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/swiper/swiper-bundle.min.js",
+              "node_modules/scrollreveal/dist/scrollreveal.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/jquery/dist/jquery.js",
+              "src/assets/scripts.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -86,10 +94,14 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
