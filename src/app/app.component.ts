@@ -10,7 +10,7 @@ import { LandingPageComponent } from "./components/landing-page/landing-page.com
     imports: [CommonModule, RouterOutlet, LandingPageComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.css'
-    
+
 })
 export class AppComponent implements OnInit {
   title = 'InPay | A fintech feita para você';
