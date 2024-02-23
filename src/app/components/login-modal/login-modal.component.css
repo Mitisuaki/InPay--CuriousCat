@@ -69,12 +69,12 @@ input[type='password'] {
 }
 
 .login_signup a {
-  color: var(--primary-color);
+  color: hsl(196, 57%, 50%);
   font-weight: var(--font-medium);
 }
 
 .login_forgot {
-  color: var(--primary-color);
+  color: hsl(196, 57%, 50%);;
   margin-bottom: 1.25rem;
 }
 
@@ -101,7 +101,7 @@ input[type='password'] {
 
 .button {
   display: inline-block;
-  background-color: #407a7d;
+  background-color: var(--primary-color-alt);
   color: var(--white-color);
   font-weight: var(--font-semibold);
   padding: 1rem 1.5rem;
