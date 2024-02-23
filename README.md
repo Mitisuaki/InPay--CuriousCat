@@ -6,7 +6,7 @@ Bem-vindo à In Pay, sua fintech e banco digital simplificados. Desenvolvido por
 
 Vamos simplificar suas operações financeiras?
 
-[Visitar o site da In Pay](https://www.inpay.com) 💎
+[Visite o site da In Pay](https://www.inpay.com) 💎
 
 -------------------------
 
