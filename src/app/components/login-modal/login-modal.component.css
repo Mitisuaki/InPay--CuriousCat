@@ -16,7 +16,7 @@
 }
 
 .login_form {
-  background-color: var(--container-color);
+  background-color: var(--title-color);
   padding: 2rem 1.5rem;
   border: 2px solid var(--primary-color-alt);
   border-radius: 10px;
@@ -25,6 +25,7 @@
 
 .login_title {
   font-size: var(--h2-font-size);
+  color: var(--primary-color);
 }
 
 .login_group {
@@ -34,7 +35,7 @@
 .login_label {
   display: block;
   text-align: initial;
-  color: var(--primary-color-alt);
+  color: var(--white-color);
   font-weight: var(--font-medium);
   margin-bottom: .25rem;
 }
@@ -61,7 +62,8 @@ input[type='password'] {
  .login_forgot {
   display: block;
   font-size: var(--small-font-size);
-  color: var(--title-color);
+  font-weight: 200;
+  color: var(--white-color);
 }
 
 .login_signup {
@@ -74,7 +76,7 @@ input[type='password'] {
 }
 
 .login_forgot {
-  color: hsl(196, 57%, 50%);;
+  color: hsl(196, 57%, 50%);
   margin-bottom: 1.25rem;
 }
 
@@ -101,8 +103,8 @@ input[type='password'] {
 
 .button {
   display: inline-block;
-  background-color: var(--primary-color-alt);
-  color: var(--white-color);
+  background-color: var(--primary-color);
+  color: var(--title-color);
   font-weight: var(--font-semibold);
   padding: 1rem 1.5rem;
   border: 20px;
