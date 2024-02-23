@@ -1,0 +1,86 @@
+<body>
+  <header>
+    <app-user-home-page-header></app-user-home-page-header>
+  </header>
+  <main class="mt-2 container-fluid d-flex flex-column align-items-center ps-0">
+
+      <div class="d-flex justify-content-between container-fluid mb-5 mt-3" id="balance-area">
+        <div class="rounded-pill text-white" id="balance-box1">
+          <h5 class="mb-0 text-white">Saldo Disponivel Débito</h5>
+          <div class="d-flex justify-content-between">
+            <span id="balance-value" class="ps-2 box-blur">317.316.731,12</span>
+            <i id="privacy" class="ri-eye-close-line secondary-privacy-color" (click)="togglePrivacy()"></i>
+          </div>
+        </div>
+        <div class="rounded-pill text-white" id="balance-box2">
+          <h5 class="mb-0 text-white">Saldo Disponivel Crédito</h5>
+          <div class="d-flex justify-content-between">
+            <span id="balance-value" class="ps-2 box-blur">120.317,00</span>
+            <i id="privacy" class="ri-eye-close-line secondary-privacy-color" (click)="togglePrivacy()"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <select name="mês/ano" id="select-mes-ano">
+          <option value="fevereiro-2024">fevereiro/2024</option>
+          <option value="janeiro-2024">janeiro/2024</option>
+          <option value="dezembro-2023">dezembro/2023</option>
+
+
+        </select>
+      </div>
+
+      <div class="table-responsive-sm container mb-4">
+        <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Data</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Status</th>
+            <th scope="col">Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let transaction of transactions; index as i">
+            <td scope="row">{{ transaction.nome }}</td>
+            <td>{{ transaction.data }}</td>
+            <td>R${{ transaction.valor }}</td>
+            <td>{{ transaction.transaction_status }}</td>
+            <!-- <td class="action overlay">{{ transaction.acao }}</td> -->
+            <td class="action" data-bs-toggle="modal" [attr.data-bs-target]="'#myModal' + i">
+              Detalhes
+            </td>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal{{i}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Detalhes</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>ID: {{transaction.transaction_id}}</p>
+                   <p>Nome: {{transaction.nome}}</p>
+                   <p>Data: {{transaction.data}}</p>
+                   <p>Valor: R${{transaction.valor}}</p>
+                   <p>Status: {{transaction.transaction_status}}</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Baixar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </tr>
+        </tbody>
+        </table>
+    </div>
+  </main>
+  <footer>
+    <app-user-home-page-footer></app-user-home-page-footer>
+  </footer>
+</body>

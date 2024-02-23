@@ -1,0 +1,44 @@
+<div class="header" id="header">
+  <nav class="nav container-fluid ps-4 pe-4  ">
+    <div class="d-flex justify-content-center align-content-center align-items-center">
+      <a href="user/home-page" class="nav_logo ">
+          <img ngSrc="assets/user-home-page/logo-InPay-branco.png" alt="logo_inpay" width="80" height="42" priority/>
+      </a>
+      <div>
+        <a href="user/home-page" class="text-white ms-4 d-flex align-items-center">
+          <img class="rounded-circle" id="user-photo" ngSrc="assets/user-home-page/Fran Coimbra.png" width="40" height="40" alt="User_photo" title="user">
+          <div id="user-name" class="ms-3" title="user">Olá, Fran Coimbra</div>
+        </a>
+      </div>
+    </div>
+
+      <div class="nav_menu pt-3 " id="nav-menu">
+          <ul class="nav_list">
+              <li class="nav_item ">
+                  <a href="user/home-page" class="nav_link">Início</a>
+              </li>
+              <li class="nav_item">
+                  <a href="#popular" class="nav_link">Meus Cartões</a>
+              </li>
+              <li class="nav_item">
+                  <a href="#products" class="nav_link">Configurações</a>
+              </li>
+          </ul>
+      </div>
+
+          <div class="nav_buttons">
+              <!-- login button-->
+              <a href="/" class="ri-logout-box-line change-theme" id="logoff-button" title="logoff"></a>
+              <!-- theme button-->
+              <i class="ri-moon-line change-theme" id="theme-button" title="change_theme" (click)="changeDarkLightMode($event)"></i>
+
+              <!-- btn toggle-->
+              <div class="nav_toggle" id="nav-toggle">
+                  <i class="ri-menu-line" (click)="sandwichButton()" ClickOutside (clickedOutside)="closeMenu()"></i>
+              </div>
+          </div>
+  </nav>
+</div>
+<div class="spacer">
+  &nbsp;
+</div>
