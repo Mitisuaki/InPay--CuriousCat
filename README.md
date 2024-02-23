@@ -1,27 +1,45 @@
-# InPay
+# In Pay 
+<sub>Este projeto foi desenvolvido para o Hackadev do programa [Sharpcoders](https://imatech.io/programas/sharp-coders) 🚀 pela equipe #Curiouscat 😸</sub>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
 
-## Development server
+Bem-vindo à In Pay, sua fintech e banco digital simplificados. Desenvolvido por programadores para programadores, oferecemos uma plataforma intuitiva que facilita integrações de pagamentos e também funciona como um banco digital seguro.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Vamos simplificar suas operações financeiras?
 
-## Code scaffolding
+[Visite o site da In Pay](https://www.inpay.com) 💎
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+-------------------------
 
-## Build
+## Login
+Acesse sua conta 
+![image](https://github.com/Mitisuaki/InPay--CuriousCat/assets/62152558/042093f3-21a7-450e-b098-4dbe3aa9f724)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Cadastro
+Cadastre-se com facilidade
+![image](https://github.com/Mitisuaki/InPay--CuriousCat/assets/62152558/9e66cd3a-bbf6-460b-9cf6-14dff0b03472)
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## HomePage
+Explore nossas soluções
+![image](https://github.com/Mitisuaki/InPay--CuriousCat/assets/62152558/054d4df1-0b2e-4880-a0a1-73e50d36a4ad)
+![image](https://github.com/Mitisuaki/InPay--CuriousCat/assets/62152558/9053ed42-49c1-43c5-b730-f9e233a49417)
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## Página inicial do usuário
+Utilize todos os recursos que você precisa
+![image](https://github.com/Mitisuaki/InPay--CuriousCat/assets/62152558/c542b7b8-abde-4f29-80e6-34a5510f08fe)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Transações
+Acompanhe suas movimentações
+![image](https://github.com/Mitisuaki/InPay--CuriousCat/assets/62152558/9102cfae-bd81-47b4-916f-f4bd63547570)
+
+________________________________________
+
+<sup>Made with:</sup>
+<br>
+<a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" width="36" height="36" alt="TypeScript" /></a>
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" alt="HTML5" /></a>
+<a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" width="36" height="36" alt="CSS3" /></a>
+<a href="https://getbootstrap.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/bootstrap-colored.svg" width="36" height="36" alt="Bootstrap" /></a>
+<a href="https://angular.io/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/angularjs-colored.svg" width="36" height="36" alt="Angular" /></a>
