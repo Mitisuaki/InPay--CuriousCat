@@ -307,7 +307,7 @@
   display: inline-flex;
   position: absolute;
   right: .75rem;
-  bottom: 1rem;
+  /* bottom: 1rem; */
   padding: .25rem;
   background: var(--third-gradient);
   font-size: 1.25rem;
