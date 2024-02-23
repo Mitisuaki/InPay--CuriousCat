@@ -12,12 +12,19 @@ Vamos simplificar suas operações financeiras?
 
 ## Login
 Acesse sua conta 
+![image](https://github.com/Mitisuaki/InPay--CuriousCat/assets/62152558/042093f3-21a7-450e-b098-4dbe3aa9f724)
 
 ## Cadastro
 Cadastre-se com facilidade
+![image](https://github.com/Mitisuaki/InPay--CuriousCat/assets/62152558/9e66cd3a-bbf6-460b-9cf6-14dff0b03472)
+
 
 ## HomePage
 Explore nossas soluções
+![image](https://github.com/Mitisuaki/InPay--CuriousCat/assets/62152558/054d4df1-0b2e-4880-a0a1-73e50d36a4ad)
+![image](https://github.com/Mitisuaki/InPay--CuriousCat/assets/62152558/9053ed42-49c1-43c5-b730-f9e233a49417)
+
+
 
 ## Página inicial do usuário
 Utilize todos os recursos que você precisa
