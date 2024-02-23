@@ -620,7 +620,7 @@ color: var(--title-color);
 }
 
 .section_title .ri-rocket-2-line {
-  font-size: 5rem;
+  font-size: 2rem;
 }
 
 /*================= Footer ================*/
@@ -779,15 +779,6 @@ color: var(--title-color);
 
 .change-theme:hover {
   color: var(--primary-color);
-}
-
-/* Variavel Dark Theme */
-
-body.dark-theme {
-  --title-color: hsl(0, 0%, 95%);
-  --text-color: hsl(0, 0%, 70%);
-  --body-color: hsl(240, 21%, 11%);
-  --container-color: hsl(0, 0, 15%);
 }
 
 /* Color change in some parts of the website, in dark theme */
@@ -1289,6 +1280,10 @@ background: hsla(15, 60%, 52%, .4);
 
   .join_form {
       width: 400px;
+  }
+
+  .section_title .ri-rocket-2-line {
+    font-size: 5rem;
   }
 
   .footer {

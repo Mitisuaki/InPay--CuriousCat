@@ -89,6 +89,15 @@ body {
     transition: background .4s;
 }
 
+/* Variavel Dark Theme */
+
+body.dark-theme {
+  --title-color: hsl(0, 0%, 95%);
+  --text-color: hsl(0, 0%, 70%);
+  --body-color: hsl(240, 21%, 11%);
+  --container-color: hsl(0, 0, 15%);
+}
+
 input,
  button {
     border: none;
