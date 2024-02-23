@@ -28,9 +28,11 @@ Explore nossas soluções
 
 ## Página inicial do usuário
 Utilize todos os recursos que você precisa
+![image](https://github.com/Mitisuaki/InPay--CuriousCat/assets/62152558/c542b7b8-abde-4f29-80e6-34a5510f08fe)
 
 ## Transações
 Acompanhe suas movimentações
+![image](https://github.com/Mitisuaki/InPay--CuriousCat/assets/62152558/9102cfae-bd81-47b4-916f-f4bd63547570)
 
 ________________________________________
 
