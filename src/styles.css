@@ -50,7 +50,8 @@
 
 /*================= TIPOGRAFIA RESPONSIVA ================*/
 
-@media screen and (min-width: 1165px) {
+@media screen and (min-width: 1152px) {
+
     :root {
         --bigger-font-size: 4rem;
         --big-font-size: 3.5rem;
@@ -136,6 +137,7 @@ img {
 }
 
 /*================= Base Classes ================*/
+
 
 .main {
   overflow: hidden; /* Para animacao Reveal */

@@ -1,0 +1,503 @@
+<!--================== HEADER ===================-->
+ <header class="header" id="header">
+  <nav class="nav container">
+      <a href="#" class="nav_logo">
+          <span>
+            <img ngSrc="../assets/img/logo-InPayDefinitive.png" alt="logo_inpay" width="80" height="80" priority/>
+          </span>
+      </a>
+
+      <div class="nav_menu" id="nav-menu">
+          <ul class="nav_list">
+              <li class="nav_item">
+                  <a href="#home" class="nav_link">Home</a>
+              </li>
+              <li class="nav_item">
+                  <a href="#popular" class="nav_link">Soluções</a>
+              </li>
+              <li class="nav_item">
+                  <a href="#choose" class="nav_link">Perguntas</a>
+              </li>
+              <li class="nav_item">
+                  <a href="#products" class="nav_link">Newsletter</a>
+              </li>
+          </ul>
+
+          <!-- close button -->
+          <div class="nav_close" id="nav-close">
+              <i class="ri-close-line"></i>
+          </div>
+      </div>
+
+          <div class="nav_buttons">
+              <!-- login button-->
+              <i class="ri-user-line change-theme" id="login-button" title="login"></i>
+              <!-- theme button-->
+              <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+              <!-- btn toggle-->
+              <div class="nav_toggle" id="nav-toggle">
+                  <i class="ri-menu-line"></i>
+              </div>
+          </div>
+  </nav>
+</header>
+
+<!--============== MODAL LOGIN ==================-->
+<app-login-modal></app-login-modal>
+
+<!--=================== MAIN ====================-->
+<main class="main">
+  <!--===== Home =====-->
+  <section class="home section" id="home">
+      <div class="home_bg"></div>
+
+
+      <div class="home_container container grid">
+          <div class="home_content">
+
+              <div class="home_data">
+                  <h3 class="home_subtitle">Conta 100% Digital</h3>
+                  <h1 class="home_title">Você sempre<br>no Controle</h1>
+
+                  <div class="home_buttons">
+                      <a href="#" class="button">Quero Agora</a>
+                      <a href="https://youtu.be/dQw4w9WgXcQ?si=xEQR4dVFOhMRqD8C" class="button_link">
+                          <i class="ri-play-circle-line"></i> Assista o video
+                      </a>
+                  </div>
+              </div>
+
+              <div class="home_info">
+                  <div>
+                      <h3 class="home_info-title">
+                          9k<span>+</span>
+                      </h3>
+                      <span class="home_info-subtitle">
+                          Clientes <br> Ativos
+                      </span>
+                  </div>
+
+                  <div>
+                      <h3 class="home_info-title">
+                          12k<span>+</span>
+                      </h3>
+                      <span class="home_info-subtitle">
+                          Transações <br> Efetuadas diárias
+                      </span>
+                  </div>
+
+                  <div>
+                      <h3 class="home_info-title">
+                          78k<span>+</span>
+                      </h3>
+                      <span class="home_info-subtitle">
+                          Pessoas <br> Ajudadas
+                      </span>
+                  </div>
+
+              </div>
+          </div>
+
+          <div class="home_image">
+              <div class="home_blob">
+                  <img ngSrc="../assets/img/img-01.png" alt="app_card" class="home_img" width="420" height="900" priority>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!--====== Popular =====-->
+  <section class="popular section" id="popular">
+      <div class="popular_container container">
+          <div class="popular_data">
+              <h2 class="section_title">Soluções Digitais</h2>
+
+              <div class="popular_description">
+                  Encontre as melhores soluções digitais que atendem a sua realidade.
+              </div>
+          </div>
+
+          <div class="popular_content grid swiper">
+              <div class="swiper-wrapper">
+                  <article class="popular_card swiper-slide">
+                      <div class="popular_blob">
+                           <img ngSrc="../assets/img/seguranca.png" alt="" class="popular_img" width="512" height="512">
+                      </div>
+
+                      <h3 class="popular_name">Seguros</h3>
+                      <span class="popular_subtitle">
+                          Opções para trazer mais tranquilidade, protegendo sua casa, seu cartão,
+                          sua família, sua saúde e até seus pets.
+                      </span>
+                      <h3 class="popular_price">
+                      </h3>
+
+                      <button class="popular_button">
+                          <i class="ri-add-line"></i>
+                      </button>
+                  </article>
+
+                  <article class="popular_card swiper-slide">
+                      <div class="popular_blob">
+                          <img ngSrc="../assets/img/cripto.png" alt="" class="popular_img" width="512" height="512">
+                      </div>
+
+                      <h3 class="popular_name">Criptos</h3>
+                      <span class="popular_subtitle">
+                          Para quem quer começar a investir ou para quem
+                          quer diversificar os investimentos.
+                      </span>
+                      <h3 class="popular_price">
+                      </h3>
+
+                      <button class="popular_button">
+                          <i class="ri-add-line"></i>
+                      </button>
+                  </article>
+
+                  <article class="popular_card swiper-slide">
+                      <div class="popular_blob">
+                          <img ngSrc="../assets/img/portabilidade.png" alt="" class="popular_img" width="512" height="512">
+                      </div>
+
+                      <h3 class="popular_name">Portabilidade</h3>
+                      <span class="popular_subtitle">
+                          Traga o seu salário para o next e resolva toda sua vida financeira sem sair do app.
+                      </span>
+                      <h3 class="popular_price">
+                      </h3>
+
+                      <button class="popular_button">
+                          <i class="ri-add-line"></i>
+                      </button>
+                  </article>
+
+                  <article class="popular_card swiper-slide">
+                      <div class="popular_blob">
+                          <img ngSrc="../assets/img/empresti.png" alt="" class="popular_img" width="512" height="512">
+                      </div>
+
+                      <h3 class="popular_name">Empréstimos</h3>
+                      <span class="popular_subtitle">
+                          Tire seus planos do papel com opções que se adaptam ao seu perfil.
+                      </span>
+                      <h3 class="popular_price">
+                      </h3>
+
+                      <button class="popular_button">
+                          <i class="ri-add-line"></i>
+                      </button>
+                  </article>
+
+                  <article class="popular_card swiper-slide">
+                      <div class="popular_blob">
+                          <img ngSrc="../assets/img/card.png" alt="" class="popular_img" width="512" height="512">
+                      </div>
+
+                      <h3 class="popular_name">Cartão Virtual</h3>
+                      <span class="popular_subtitle">
+                          Pague suas compras online com mais segurança e praticidade.
+                      </span>
+                      <h3 class="popular_price">
+                      </h3>
+
+                      <button class="popular_button">
+                          <i class="ri-add-line"></i>
+                      </button>
+                  </article>
+              </div>
+
+              <!-- Navigation buttons -->
+              <div class="swiper-button-prev">
+                  <i class="ri-arrow-left-s-line"></i>
+              </div>
+
+              <div class="swiper-button-next">
+                  <i class="ri-arrow-right-s-line"></i>
+              </div>
+          </div>
+
+      </div>
+  </section>
+
+  <!--====== Choose =====-->
+  <section class="choose section" id="choose">
+      <div class="choose_container container grid">
+
+          <div class="choose_image">
+              <div class="choose_blob">
+                  <img ngSrc="../assets/img/img-05.png" alt="inPay_vantagens" class="choose_img" width="900" height="900">
+                  <h1 class="choose_blob-title">lorem</h1>
+              </div>
+          </div>
+
+          <div class="choose_content">
+              <div class="choose_data">
+                  <h2 class="section_title">Vantagens de ser InPay</h2>
+
+                  <p class="choose_description">
+                    Uma conta digital que te dá controle sobre o seu dinheiro.
+                    Com o seu Assistente de Pagamentos, seus boletos ficam
+                    em dia sem dor de cabeça.
+                  </p>
+              </div>
+
+              <div class="choose_faq">
+
+                  <div class="choose_faq-item">
+                      <div class="choose_faq-header">
+                          <div class="choose_faq-icon">
+                              <i class="ri-add-line"></i>
+                          </div>
+                          <h3 class="choose_faq-title">
+                            Você no controle.
+                            <i class="ri-gamepad-line"></i>
+                          </h3>
+                      </div>
+
+                      <div class="choose_faq-content">
+                          <p class="choose_faq-description">
+                            Conta gratuita, cartão de crédito sem anuidade,
+                            empréstimo e muito mais: tudo num único app.
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="choose_faq-item">
+                      <div class="choose_faq-header">
+                          <div class="choose_faq-icon">
+                              <i class="ri-add-line"></i>
+                          </div>
+                          <h3 class="choose_faq-title">
+                            Investimento para Todos
+                            <i class="ri-ubuntu-line"></i>
+                          </h3>
+                      </div>
+
+                      <div class="choose_faq-content">
+                          <p class="choose_faq-description">
+                            Opções de investimentos a partir de R$1,00. Empréstimos que
+                            combinam com cada momento da sua vida
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="choose_faq-item">
+                      <div class="choose_faq-header">
+                          <div class="choose_faq-icon">
+                              <i class="ri-add-line"></i>
+                          </div>
+                          <h3 class="choose_faq-title">
+                            O fim da complexidade e burocracia
+                            <i class="ri-chat-delete-line"></i>
+                          </h3>
+                      </div>
+
+                      <div class="choose_faq-content">
+                          <p class="choose_faq-description">
+                            Para quem sabe que tecnologia e design são melhores
+                            do que agências e papelada. Soluções simples, seguras e
+                            100% digitais para você ter o controle do seu dinheiro
+                            nas suas mãos.
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="choose_faq-item">
+                      <div class="choose_faq-header">
+                          <div class="choose_faq-icon">
+                              <i class="ri-add-line"></i>
+                          </div>
+                          <h3 class="choose_faq-title">
+                            Muuuitos Mimos
+                            <i class="ri-gift-line"></i>
+                          </h3>
+                      </div>
+
+                      <div class="choose_faq-content">
+                          <p class="choose_faq-description">
+                            No crédito ou no débito, aproveite descontos especiais e brindes
+                            exclusivos para quem é InPay.
+                          </p>
+                      </div>
+                  </div>
+
+              </div><!-- choose_faq -->
+          </div>
+
+      </div>
+  </section>
+
+  <!--====== Feature =====-->
+  <section class="features section">
+      <div class="features_container container grid">
+          <div class="features_image">
+              <div class="features_blob">
+                  <img ngSrc="../assets/img/asian.png" alt="vantagens_card" class="features_img" width="2000" height="2000">
+                  <img ngSrc="../assets/img/asian2.png" alt="vantagens_card" class="features_img" width="2000" height="2000">
+              </div>
+          </div>
+
+          <div class="features_content">
+              <div class="features_data">
+                  <h2 class="features_title">Zero Anuidade</h2>
+
+                  <p class="features_description">
+                    Você não paga nada para ter o seu cartão next cheio de vantagens
+                    e fazer suas compras com facilidade e segurança em qualquer lugar no mundo.
+                  </p>
+              </div>
+
+              <div class="features_info">
+
+                  <div class="features_info-card">
+                      <h3 class="features_info-title">
+                        <i class="ri-global-line"></i>
+                        <br> Internacional
+                      </h3>
+                  </div>
+
+                  <div class="features_info-card">
+                      <h3 class="features_info-title">
+                        <i class="ri-creative-commons-zero-line"></i>
+                        <br>Zero Taxas
+                      </h3>
+                  </div>
+
+                  <div class="features_info-card">
+                      <h3 class="features_info-title">
+                        <i class="ri-gift-line"></i>
+                        <br> Mimos & Brindes
+                      </h3>
+                  </div>
+
+                  <div class="features_info-card">
+                      <h3 class="features_info-title">
+                        <i class="ri-bit-coin-line"></i>
+                        <br> Use com Cripto
+                      </h3>
+                  </div>
+
+              </div><!--features info-->
+          </div>
+      </div>
+  </section>
+
+  <!--====== Join =====-->
+  <section class="join section" id="products">
+
+      <div class="join_container container grid">
+
+          <div class="join_bg grid">
+
+              <div class="join_image">
+                  <div class="join_blob">
+                      <img src="../assets/img/img-06.png" alt="" class="join_img">
+                  </div>
+              </div>
+
+              <div class="join_content grid">
+                  <div class="join_data">
+                      <h2 class="section_title">
+                        <i class="ri-rocket-2-line"></i>Vamos Lá!
+                      </h2>
+
+                      <p class="join_description">
+                          Receba dicas de investimentos, novidades, auxilios em
+                          planejamentos e tudo que rola no Universo InPay.
+                      </p>
+                  </div>
+
+                  <form action="" class="join_form">
+                      <input type="email" class="join_input" placeholder="Informe seu email">
+                      <button class="button join_button">
+                          Junte-se a nós
+                      </button>
+                  </form>
+              </div>
+
+          </div>
+      </div>
+  </section>
+</main>
+
+<!--================== FOOTER ===================-->
+<footer class="footer">
+  <div class="footer_content container grid">
+      <div class="footer_content grid">
+
+             <div>
+                  <a href="#" class="footer_logo">
+                      <span>InPay</span>
+                  </a>
+
+                  <div class="footer_description">
+                    A solução em finanças com integração de API's <br>
+                    que entrega ao DEV uma ferramenta completa <br>
+                    de gestão financeira.
+                  </div>
+              </div>
+
+              <div class="footer_data grid">
+                      <div>
+                          <h3 class="footer_title">Sobre</h3>
+                          <ul class="footer_links">
+                              <li><a href="" class="footer_link">Sobre Nós</a></li>
+                              <li><a href="" class="footer_link">Informações</a></li>
+                              <li><a href="" class="footer_link">Blogs</a></li>
+                          </ul>
+                      </div>
+
+                      <div>
+                          <h3 class="footer_title">Ajuda</h3>
+                          <ul class="footer_links">
+                              <li><a href="" class="footer_link">O que é InPay</a></li>
+                              <li><a href="" class="footer_link">Nosso Suporte</a></li>
+                          </ul>
+                      </div>
+
+                      <div>
+                          <h3 class="footer_title">Empresa</h3>
+                          <ul class="footer_links">
+                              <li><a href="" class="footer_link">Por que InPay </a></li>
+                              <li><a href="" class="footer_link">Capital</a></li>
+                              <li><a href="" class="footer_link">Segurança</a></li>
+                          </ul>
+                      </div>
+
+                      <div>
+                          <h3 class="footer_title">Siga-nos</h3>
+                          <div class="footer_social">
+                              <a href="#" target="_blank" class="footer_social-link">
+                                  <i class="ri-facebook-circle-line"></i>
+                              </a>
+
+                              <a href="#" target="_blank" class="footer_social-link">
+                                  <i class="ri-instagram-line"></i>
+                              </a>
+
+                              <a href="#" target="_blank" class="footer_social-link">
+                                  <i class="ri-twitter-x-line"></i>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+      </div>
+  </div>
+  <div class="footer_group">
+      <div class="footer_terms">
+          <a href="#">Termos e Acordos</a>
+          <a href="#">Privacy Policy</a>
+      </div>
+
+      <span class="footer_copy">
+          &#169; Copyright #CuriousCat. All right reserved
+      </span>
+  </div>
+</footer>
+
+<!--================= SCROLL UP ==================-->
+<a href="#" class="scrollup" id="scroll-up">
+  <i class="ri-arrow-up-line"></i>
+</a>
