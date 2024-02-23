@@ -2,6 +2,7 @@ import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 import { ClickOutsideDirective } from '../../../directives/click-outside.directive';
 
+
 @Component({
   selector: 'app-user-home-page-header',
   standalone: true,
