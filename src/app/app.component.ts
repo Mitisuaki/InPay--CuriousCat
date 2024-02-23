@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { LandingPageComponent } from "./components/landing-page/landing-page.component";
+import { LandingPageComponent } from "./components/pages/landing-page/landing-page.component";
 
 
 @Component({
