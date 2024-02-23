@@ -19,7 +19,7 @@
 
         <!-- CPF -->
         <div class="form-floating">
-        <input (input)="inputChanged('input_cpf',$event)" type="number" id="cpf" class="form-control-sm"
+        <input (input)="inputChanged('input_cpf',$event)" type="text" id="cpf" class="form-control-sm"
         formControlName="cpf" placeholder="123.456.789-10" class="form-control">
         <label class="form-label" for="cpf">CPF</label>
         <div *ngIf="inputValues['input_cpf'] !== ''">
@@ -71,7 +71,9 @@
         </div>
 
 
-        <input type="submit" value="Cadastrar" class="btn btn-primary" [disabled]="formulario.invalid">
+        <div class="pe-2 d-flex justify-content-end">
+          <input type="submit" value="Cadastrar" class="btn btn-primary " [disabled]="formulario.invalid">
+        </div>
         </form>
 
     </div>

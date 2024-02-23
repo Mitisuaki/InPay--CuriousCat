@@ -35,9 +35,7 @@ export class CadastroUsuarioComponent {
   autenticar():void{
     if(
       this.formulario.value.senha === this.formulario.value.confirmarSenha
-      ){
-        console.log("usuario criado com sucesso")
-        // Redirecionamento
+      ){        // Redirecionamento
         this.rota.navigateByUrl('user/home-page');
       }else{
         this.mensagem ="Senhas não coincidem";

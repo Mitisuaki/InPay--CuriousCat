@@ -2,14 +2,14 @@
   <nav class="nav container">
       <a href="#" class="nav_logo">
           <span>
-            <img ngSrc="/assets/logo-InPayDefinitive.png" alt="logo_inpay" width="80" height="80" priority/>
+            <img ngSrc="assets/user-home-page/logo-InPay-branco.png" alt="logo_inpay" width="80" height="42" priority/>
           </span>
       </a>
 
-      <div class="nav_menu" id="nav-menu">
+      <div class="nav_menu pt-4" id="nav-menu">
           <ul class="nav_list">
               <li class="nav_item">
-                  <a href="#home" class="nav_link active-link">Home</a>
+                  <a href="#home" class="nav_link">Home</a>
               </li>
               <li class="nav_item">
                   <a href="#popular" class="nav_link">Soluções</a>
@@ -32,7 +32,7 @@
               <!-- login button-->
               <i class="ri-user-line change-theme" id="login-button" title="login"></i>
               <!-- theme button-->
-              <i class="ri-moon-line change-theme" id="theme-button"></i>
+              <i class="ri-moon-line change-theme" id="theme-button" (click)="changeDarkLightMode($event)"></i>
 
               <!-- btn toggle-->
               <div class="nav_toggle" id="nav-toggle">
