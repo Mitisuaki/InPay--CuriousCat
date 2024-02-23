@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/curious-cat-bank",
+            "outputPath": "dist/InPay--CuriousCat",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -54,7 +54,17 @@
               "outputHashing": "all"
             },
             "development": {
-              "optimization": false,
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false
+                  },
+                "fonts": true
+              },
+              "outputHashing": "all",
+              "namedChunks": false,
+              "aot": true,
               "extractLicenses": false,
               "sourceMap": true
             }
