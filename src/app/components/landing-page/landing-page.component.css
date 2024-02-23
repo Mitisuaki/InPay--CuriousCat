@@ -78,7 +78,7 @@
   background: var(--third-gradient);
   background-clip: text;
   -webkit-background-clip: text;
-  color: var(--primary-color);
+  color: hsl(196, 57%, 50%);
 }
 
 .nav_close {
@@ -109,7 +109,7 @@
 /* Active link*/
 
 .active-link {
-  background: var(--primary-color);
+  background: #37A1C8;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
