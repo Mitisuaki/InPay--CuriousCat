@@ -611,7 +611,7 @@ background-color: hsl(196, 57%, 50%);
 .join_button {
   padding-block: 1.1rem;
   background-color: var(--title-color);
-  color: var(--primary-color);
+  color: var(--text-color);
   cursor: pointer;
 }
 
