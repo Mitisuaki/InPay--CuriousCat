@@ -45,7 +45,7 @@
   background-color: var(--container-color);
   border-bottom: 2px solid var(--primary-color-alt);
   padding: 1rem;
-  color: var(--title-color);
+  color: var(--text-color);
 }
 
 .login_input:hover {
