@@ -6,7 +6,7 @@ Bem-vindo à In Pay, sua fintech e banco digital simplificados. Desenvolvido por
 
 Vamos simplificar suas operações financeiras?
 
-[Visite o site da In Pay](https://mitisuaki.github.io/InPay--CuriousCat/) 💎
+[Visite o site da In Pay](https://inpay.vercel.app) 💎
 
 -------------------------
 
