@@ -135,6 +135,8 @@ img {
 .container {
   max-width: 1120px;
   /* margin-inline: 1.5rem; */
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
 }
 
 .grid {
