@@ -1,10 +1,26 @@
+*{
+  padding: 0;
+  margin:0;
+}
+main{
+  width: 100vw;
+}
+.container{
+  margin-top: 1em;
+  margin-bottom: 2em;
+  padding: 5;
+  width: 100%;
+  padding-left: 7em;
+}
 .form-floating{
-  margin: 10px;
+  margin: 3px;
+  width: 65%;
 }
 
-.container{
-  margin-top: 10;
+.form-control{
+  border:0;
 }
+
 label{
   font-size:small;
 }
@@ -12,12 +28,18 @@ label{
 .titulo{
   text-align: center;
 }
+
 .container{
-margin-top: 5rem;
+  margin-top: 6rem;
 }
 
 .formulario-cadastro{
-  padding: 50px;
+  /* padding: 50px; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 .mensagem-de-erro{
   color:crimson;
@@ -26,4 +48,9 @@ margin-top: 5rem;
 
 p{
   color:indianred
+}
+
+#termos-container{
+  align-self:flex-end;
+  padding: 0 10em;
 }

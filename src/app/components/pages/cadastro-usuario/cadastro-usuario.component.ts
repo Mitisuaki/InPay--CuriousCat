@@ -16,11 +16,11 @@ import { HeaderComponent } from "../header/header.component";
 export class CadastroUsuarioComponent {
   // formulário
   formulario = new FormGroup({
-    name: new FormControl('', [Validators.required ,Validators.pattern(/^[a-z ,.'-]+$/i)]),
+    nickname: new FormControl('', [Validators.required ,Validators.pattern(/^[^0-9][^@#]+$/)]),
     cpf: new FormControl('', [Validators.required, Validators.pattern(/^\d{3}\d{3}\d{3}\d{2}$/)]),
     email: new FormControl('', [Validators.required, Validators.email]),
     celular: new FormControl('', [Validators.required,Validators.pattern(/^\d{10}/)] ),
-    data_nascimento: new FormControl('', [Validators.required, Validators.pattern(/^\d{2}\/\d{2}\/\d{4}/)]),
+    // data_nascimento: new FormControl('', [Validators.required, Validators.pattern(/^\d{2}\/\d{2}\/\d{4}/)]),
     senha: new FormControl('', [Validators.required]),
     confirmarSenha: new FormControl('', [Validators.required]),
 
@@ -47,8 +47,7 @@ export class CadastroUsuarioComponent {
     input_nome: '',
     input_cpf:'',
     input_email: '',
-    input_celular:'',
-    input_data:''
+    input_celular:''
   };
 
   inputChanged(inputName: string, event: any) {
