@@ -1,20 +1,27 @@
 *{
   padding: 0;
   margin:0;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
 }
+
 main{
-  width: 100vw;
+  width: 100%;
 }
-.container{
+
+.container p-3{
+  display: flex;
+  align-items:center;
   margin-top: 1em;
   margin-bottom: 2em;
   padding: 5;
   width: 100%;
-  padding-left: 7em;
 }
+
 .form-floating{
   margin: 3px;
-  width: 65%;
+  width: 100%;
 }
 
 .form-control{
@@ -35,7 +42,7 @@ label{
 
 .formulario-cadastro{
   /* padding: 50px; */
-  width: 100%;
+  width: 65%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,6 +58,8 @@ p{
 }
 
 #termos-container{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
   align-self:flex-end;
-  padding: 0 10em;
 }

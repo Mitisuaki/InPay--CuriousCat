@@ -1,6 +1,5 @@
 <app-header></app-header>
 <main class="container">
-      <div class="container p-1">
 
         <!-- FORMULARIO DE CADASTRO -->
         <form [formGroup]="formulario" (submit)="autenticar()" novalidate class="formulario-cadastro">
@@ -61,15 +60,16 @@
         </div>
 
         <div id="termos-container">
-          <label><input type="checkbox" class="mx-2">Aceito os <a>Termos de uso</a></label>
+            <input type="checkbox" class="m-1 d-inline">
+            <label class="d-inline">
+            Aceito os <a class="d-inline">Termos de uso</a>
+          </label>
         </div>
-
         <div class="p-2 ">
           <input id="cadastrar" type="submit" value="Cadastrar" class="btn btn-primary p-2 mt-2" [disabled]="formulario.invalid">
         </div>
-        </form>
 
-    </div>
+        </form>
 
   </main>
 <footer>
