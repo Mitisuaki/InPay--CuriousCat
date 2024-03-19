@@ -28,11 +28,11 @@
   color: var(--primary-color);
 }
 
-.login_group {
+.form-floating {
   row-gap: 1.25rem;
 }
 
-.login_label {
+.form-label {
   display: block;
   text-align: initial;
   color: var(--white-color);
@@ -40,15 +40,25 @@
   margin-bottom: .25rem;
 }
 
-.login_input {
+.form-control:focus + .form-label {
+  background-color: transparent;
+  color: antiquewhite;
+}
+.form-control-plaintext~label:after, .form-floating>.form-control:focus~label:after, .form-floating>.form-control:not(:placeholder-shown)~label:after, .form-floating>.form-select~label:after {
+  color: var(--white-color);
+  background-color: transparent;
+}
+.form-control{
   width: 100%;
-  background-color: var(--container-color);
+  /* background-color:deeppink; */
+  background-color: var(--title-color);
+  border: var(--title-color);
   border-bottom: 2px solid var(--primary-color-alt);
   padding: 1rem;
   color: var(--white-color);
 }
 
-.login_input:hover {
+.form-control-sm:hover {
   border-bottom: 2px solid var(--primary-color);
 }
 
