@@ -1,4 +1,5 @@
-/*========= MENU PRINCIPAL ========= */
+/*======================== MENU PRINCIPAL ==================== */
+
 function main() {
 
 const navMenu = document.getElementById('nav-menu'),
@@ -25,7 +26,7 @@ const navMenu = document.getElementById('nav-menu'),
     });
 }
 
-/*========= MENU MOBILE =========*/
+/*======================== MENU MOBILE =========================*/
 
 const navLink = document.querySelectorAll('.nav_link');
 
@@ -36,7 +37,7 @@ const linkAction = () => {
 
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
-/*========= CHANGE BACKGROUND HEADER =========*/
+/*================= CHANGE BACKGROUND HEADER =====================*/
 
 const scrollHeader = () => {
     const header = document.getElementById('header');
@@ -46,7 +47,7 @@ const scrollHeader = () => {
 
 window.addEventListener('scroll', scrollHeader);
 
-/*========= SWIPER POPULAR =========*/
+/*=========================== SWIPER POPULAR ========================*/
 
 const popularSwiper = new Swiper('.popular_content', {
     // Optional parameters
@@ -68,7 +69,7 @@ const popularSwiper = new Swiper('.popular_content', {
 
   });
 
-  /*========= CHOOSE FAQ =========*/
+  /*======================== CHOOSE FAQ ========================*/
 
   const faqItems = document.querySelectorAll('.choose_faq-item');
 
@@ -103,7 +104,7 @@ const popularSwiper = new Swiper('.popular_content', {
     }
 }
 
-/*======== SHOW ScrollUp =========*/
+/*================== SHOW SCROLLUP ======================*/
 
 const scrollUp = () => {
     const scrollup = document.getElementById('scroll-up');
@@ -114,7 +115,7 @@ const scrollUp = () => {
 window.addEventListener('scroll', scrollUp);
 
 
-/*======== Scroll Section Active Link =========*/
+/*================= SCROLL SECTION ACTIVE LINK ================*/
 
 const sections = document.querySelectorAll('section[id]');
 
@@ -172,7 +173,7 @@ sr.reveal(`.home_image, .features_image`, {origin: 'bottom'});
 sr.reveal(`.choose_content, .features_content`, {origin: 'right'});
 
 
-/* ========== LOGIN AREA =========== */
+/* ======================== LOGIN AREA ========================== */
 
 const loginButton = document.getElementById('login-button'),
       loginClose = document.getElementById('login-close'),

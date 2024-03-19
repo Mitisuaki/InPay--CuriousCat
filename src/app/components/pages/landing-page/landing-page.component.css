@@ -30,6 +30,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  margin-left: 1rem;
 }
 
 .nav_logo span img {
