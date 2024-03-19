@@ -6,7 +6,7 @@
       </h3>
 
       <!--==== Login ===-->
-      <div class="login_group grid">
+      <!-- <div class="login_group grid">
           <div>
               <label for="login-email" class="login_label"><i class="ri-mail-line"></i> Email</label>
               <input type="email" placeholder="Informe seu Email" id="login-email" class="login_input">
@@ -16,7 +16,26 @@
               <label for="login-pass" class="login_label"><i class="ri-lock-line"></i> Senha</label>
               <input type="password" placeholder="Informe sua Senha" id="login-pass" class="login_input">
           </div>
-      </div>
+      </div> -->
+
+      <form [formGroup]="formulario" (submit)="autenticar()" novalidate class="login_group grid">
+        <!-- E-mail -->
+        <div class="form-floating">
+          <input (input)="inputChanged('input_email',$event)" type="email" id="email" class="form-control-sm" formControlName="email" placeholder="usuario@mail.com" class="form-control">
+          <label class="form-label" for="email">Email</label>
+          <div *ngIf="inputValues['input_email'] !== ''">
+          <p *ngIf="formulario.get('email')?.hasError('required')">Informe e-mail</p>
+          <p *ngIf="formulario.get('email')?.hasError('email')">Informe um e-mail válido</p>
+          </div>
+          </div>
+
+        <!-- SENHA -->
+        <div class="form-floating">
+          <input type="password"  id="senha" class="form-control-sm" formControlName="senha" placeholder="******"  class="form-control">
+          <label class="form-label" for="senha">Senha</label>
+          </div>
+
+      </form>
 
       <!--==== Sign Up ===-->
       <div>
