@@ -8,6 +8,7 @@
 
 main{
   width: 100%;
+  padding: 0 5em;
 }
 
 .container p-3{
@@ -63,3 +64,5 @@ p{
   align-items:center;
   align-self:flex-end;
 }
+
+
