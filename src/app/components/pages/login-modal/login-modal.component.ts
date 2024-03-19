@@ -14,21 +14,31 @@ export class LoginModalComponent {
     email: new FormControl('', [Validators.required, Validators.email]),
     senha: new FormControl('', [Validators.required]),
   });
-    // Construtor
+
       constructor(private rota:Router){}
 
     mensagem:string="";
-    // Função para autenticar
-    autenticar():void{
-      console.log("a")
-      // if(
-      //   this.formulario.value.senha === this.formulario.value.confirmarSenha
-      //   ){        // Redirecionamento
-      //     this.rota.navigateByUrl('user/home-page');
-      //   }else{
-      //     this.mensagem ="Senhas não coincidem";
-      //   }
 
+    // Credenciais
+    email_banco:string="fran_coimbra@hotmail.com"
+    senha_banco:string="#curiouscat_nota1000";
+
+    // Função para autenticar credenciais
+    autenticar():void{
+      if(
+        this.formulario.value.senha === this.senha_banco && this.formulario.value.email === this.email_banco
+        ){
+          this.rota.navigateByUrl('user/home-page');
+        }else if(this.formulario.value.senha === this.senha_banco && this.formulario.value.email !== this.email_banco
+          ){
+            this.mensagem = "Email incorreto!"
+        }else if(this.formulario.value.senha !== this.senha_banco && this.formulario.value.email === this.email_banco
+          ){
+            this.mensagem = "Senha incorreta!"
+        }else if(this.formulario.value.senha !== this.senha_banco && this.formulario.value.email !== this.email_banco
+          ){
+            this.mensagem = "Credenciais incorretas!"
+        }
     }
 
     inputValues: { [key: string]: string } = {

@@ -1,22 +1,10 @@
 <!--========== login ===========-->
 <div class="login grid" id="login-content">
-  <form action="" class="login_form grid">
+  <div class="login_form grid">
       <h3 class="login_title">
         <i class="ri-user-line"></i> Login
       </h3>
 
-      <!--==== Login ===-->
-      <!-- <div class="login_group grid">
-          <div>
-              <label for="login-email" class="login_label"><i class="ri-mail-line"></i> Email</label>
-              <input type="email" placeholder="Informe seu Email" id="login-email" class="login_input">
-           </div>
-
-           <div>
-              <label for="login-pass" class="login_label"><i class="ri-lock-line"></i> Senha</label>
-              <input type="password" placeholder="Informe sua Senha" id="login-pass" class="login_input">
-          </div>
-      </div> -->
 
       <form [formGroup]="formulario" (submit)="autenticar()" novalidate class="login_group grid">
         <!-- E-mail -->
@@ -35,20 +23,22 @@
           <label class="form-label" for="senha">Senha</label>
           </div>
 
+          <!--==== Sign Up ===-->
+          <div>
+              <p class="fs-6 text-light">Você ainda não tem uma conta?</p>
+              <a href="cadastro" class="text-info fs-6 fw-light">Cadastre-se!</a>
+              <br>
+              <a href="" class="text-info fs-6 fw-light">Esqueceu a senha?</a>
+              <br>
+              <p class="text-danger d-inline">{{mensagem}}</p>
+
+              <div class="pe-2 d-flex justify-content-end">
+                <input type="submit" value="Login" class="btn btn-primary w-100 bg-info text-dark mt-2" [disabled]="formulario.invalid">
+              </div>
+          </div>
       </form>
 
-      <!--==== Sign Up ===-->
-      <div>
-          <span class="login_signup">
-              Você ainda não tem uma conta?
-          </span>
-          <a href="cadastro" class="text-info">Cadastre-se!</a>
-          <br>
-          <a href="#" class="text-info">Esqueceu a senha?</a>
-
-          <a href="user/home-page" class="login_button button">Log In</a>
-      </div><!--Sign Up-->
-  </form>
+    </div>
 
   <i class="ri-close-line login_close" id="login-close"></i>
 </div>
