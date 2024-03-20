@@ -10,5 +10,5 @@ export const routes: Routes = [
   {path:"user/transactions", component: HistoricoTransacoesComponent},
   {path:"cadastro", component: CadastroUsuarioComponent},
   {path:"", component: LandingPageComponent},
-  {path:"user/acessar_conta",component: CriarAcessarContaComponent}
+  {path:"user/acessar_conta",component: CriarAcessarContaComponent},
 ];
