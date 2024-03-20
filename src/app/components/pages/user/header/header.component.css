@@ -124,7 +124,7 @@
 }
 
 /* Mudança de Background Header (mobile) */
-
+/*
 .bg-header {
   background: var(--body-color);
   box-shadow: 0 2px 16px hsla(0, 0%, 0%, .1);
@@ -133,7 +133,7 @@
 .bg-header :is(.nav_logo, .nav_toggle, .change-theme) {
   color: var(--title-color);
 }
-
+/*
 
 
 /*================= Theme ================*/
