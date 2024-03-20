@@ -9,7 +9,7 @@ import { CartaoCreditoPageComponent } from './components/pages/user/cartao-credi
 export const routes: Routes = [
   {path:"user/home-page", component: HomePageComponent},
   {path:"user/transactions", component: HistoricoTransacoesComponent},
-  {path:"user/card-Page", component: CartaoCreditoPageComponent },
+  {path:"user/card-page", component: CartaoCreditoPageComponent },
   {path:"cadastro", component: CadastroUsuarioComponent},
   {path:"", component: LandingPageComponent}
 ];

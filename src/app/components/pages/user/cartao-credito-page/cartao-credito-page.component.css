@@ -11,3 +11,69 @@
   background-color: var(--primary-color);
 }
 
+/*===== Front-face Card ======*/
+
+.front-face header,
+ .front-face .logo {
+  display: flex;
+  align-items: center;
+ }
+
+ .front-face .logo {
+  justify-content: space-between;
+ }
+
+.front-face .logo img {
+  width: 48px;
+  margin-right: 10px;
+}
+
+h5 {
+  font-size: .8rem;
+  font-weight: var(--font-regular);
+}
+
+.front-face .chip {
+  width: 45px;
+}
+
+.front-face .card-details {
+  margin-top: 40px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.name-number h6 {
+  font-size: 1rem;
+  font-weight: var(--font-regular);
+}
+
+.name-number h5.number {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.name-number h5.name {
+  margin-top: 20px;
+}
+
+/*===== Back-face Card ======*/
+
+.back-face {
+  border: none;
+}
+
+.back-face h6 {
+  font-size: .5rem;
+}
+
+.back-face .magnetic-tarj {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 100%;
+  height: 45px;
+  background-color: #000;
+}
+
