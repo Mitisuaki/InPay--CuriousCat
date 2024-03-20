@@ -16,7 +16,6 @@
 {
     width: 100%;
     height: var(--header-height);
-
 }
 
 .header{
@@ -207,9 +206,11 @@ body.dark-theme {
    .dark-theme .nav_menu {
       box-shadow: none;
    }
+
   }
 
   @media screen and (min-width: 1165px) {
+
     .container {
         margin-inline: auto;
     }
@@ -218,17 +219,16 @@ body.dark-theme {
         height: calc(var(--header-height) + 1.5rem);
     }
 
-    .spacer
-{
+    .spacer {
     width: 100%;
     height: calc(var(--header-height) + 1.5rem);
-
-}
+    }
 
     #user-photo{
       height: 50px;
       width: 50px;
     }
+
   }
 
 

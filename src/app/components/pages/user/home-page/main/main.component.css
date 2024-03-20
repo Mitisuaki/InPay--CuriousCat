@@ -1,7 +1,7 @@
 :host {
   --icon-font-size: 4rem;
   --icon-bordersize: 100px;
-  --privacy: hsl(183, 98%, 50%) ;
+  --privacy: hsl(183, 98%, 50%);
   --privacy-alt: hsl(0, 0%, 50%);
 }
 
@@ -27,7 +27,7 @@
 }
 
 #balance-value, #privacy{
-  color: var(--privacy);
+  color: hsla(183, 78%, 30%, 1);
 }
 
 #privacy:hover{
@@ -60,7 +60,7 @@
 #operations-items{
   padding: 20px;
   background-color: var(--title-color);
-  color: var(--primary-color);
+  color: hsla(183, 78%, 30%, 1);
   font-size: var(--icon-font-size);
   width: var(--icon-bordersize);
   height: var(--icon-bordersize);
@@ -78,6 +78,17 @@
 .d-grid{
   row-gap: 2.5em;
 }
+
+
+/* Mudança de cor de componentes da página
+
+.texto {
+  color: var(--primary-color-alt);
+}
+
+.dark-theme:is(.texto) {
+  color: #fff !important;
+}*/
 
 @media screen and (max-width: 745px) and (min-width: 0px) {
 

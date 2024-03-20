@@ -1,5 +1,5 @@
 import { NgOptimizedImage } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ClickOutsideDirective } from '../../../directives/click-outside.directive';
 
 
@@ -11,7 +11,9 @@ import { ClickOutsideDirective } from '../../../directives/click-outside.directi
   styleUrl: './header.component.css'
 })
 
+
 export class UserHomePageHeaderComponent {
+
 
 public changeDarkLightMode(event:Event):void {
   const themeButton:HTMLElement = <HTMLElement>event.target;
@@ -46,4 +48,5 @@ public async closeMenu(){
     navMenu.classList.toggle('show-menu');
   }
 }
+
 }
