@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+
+*{
+  background-color:#181818;
+  font-family: "Atkinson Hyperlegible", sans-serif;
+}
+.fs-6{
+  background-color: transparent;
+}
+
+#msg{
+  font-size: x-small;
+}
