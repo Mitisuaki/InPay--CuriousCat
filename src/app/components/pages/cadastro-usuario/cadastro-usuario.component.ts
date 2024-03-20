@@ -19,12 +19,11 @@ export class CadastroUsuarioComponent {
   // formulário
   formulario = new FormGroup({
     nickname: new FormControl('', [Validators.required ,Validators.pattern(/^[^0-9][^@#]+$/)]),
-    cpf: new FormControl('', [Validators.required, Validators.pattern(/^\d{3}\d{3}\d{3}\d{2}$/)]),
     email: new FormControl('', [Validators.required, Validators.email]),
     celular: new FormControl('', [Validators.required,Validators.pattern(/^\d{10}/)] ),
-    // data_nascimento: new FormControl('', [Validators.required, Validators.pattern(/^\d{2}\/\d{2}\/\d{4}/)]),
     senha: new FormControl('', [Validators.required]),
     confirmarSenha: new FormControl('', [Validators.required]),
+    termos: new FormControl('', [Validators.required]),
 
   });
 

@@ -1,10 +1,12 @@
-<app-header></app-header>
-<main class="container">
-
-        <!-- FORMULARIO DE CADASTRO -->
-        <form [formGroup]="formulario" (submit)="autenticar()" novalidate class="formulario-cadastro">
+<main class="bg-dark d-flex flex-row p-5 w-100">
+  <div class="left-section mx-4 my-5 w-75">
+      <img src="../../../../assets/logo-InPayDefinitive.png" alt="">
+  </div>
+  <div class="left-section mx-4 w-75">
+            <!-- FORMULARIO DE CADASTRO -->
+        <form [formGroup]="formulario" (submit)="autenticar()" novalidate class="formulario-cadastro p-3">
           <div class="titulo">
-            <h2>Cadastre-se</h2>
+            <h2 class="text-light fw-light">Cadastre-se</h2>
           </div>
 
           <!-- NOME -->
@@ -14,16 +16,6 @@
           <div *ngIf="inputValues['input_nickname'] !== ''">
           <p *ngIf="formulario.get('nickname')?.hasError('pattern')">Informe um nickname válido</p>
           </div>
-        </div>
-
-        <!-- CPF -->
-        <div class="form-floating p-1">
-        <input (input)="inputChanged('input_cpf',$event)" type="text" id="cpf" class="form-control"
-        formControlName="cpf" placeholder="123.456.789-10" >
-        <label class="form-label" for="cpf">CPF</label>
-        <div *ngIf="inputValues['input_cpf'] !== ''">
-        <p *ngIf="formulario.get('cpf')?.hasError('pattern')">Informe um CPF válido</p>
-        </div>
         </div>
 
         <!-- EMAIL -->
@@ -60,7 +52,7 @@
         </div>
 
         <div id="termos-container">
-            <input type="checkbox" class="m-1 d-inline">
+            <input type="checkbox" class="form-check m-1 d-inline" formControlName="termos">
             <label class="d-inline">
             Aceito os <a class=" d-inline text-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Termos de uso</a>
           </label>
@@ -68,17 +60,10 @@
         <div class="p-2 w-100">
           <input id="cadastrar" type="submit" value="Cadastrar" class="btn btn-primary bg-info text-dark p-3 mt-2 mb-3" [disabled]="formulario.invalid">
         </div>
-
         </form>
-
-        <app-termos-de-uso-modal></app-termos-de-uso-modal>
-
-
+  </div>
   </main>
-<footer>
-    <app-user-home-page-footer></app-user-home-page-footer>
-  </footer>
 
 
-
+<app-termos-de-uso-modal></app-termos-de-uso-modal>
 

@@ -1,12 +1,6 @@
-*{
-  padding: 0;
-  margin:0;
-  display: flex;
-  flex-direction: column;
-  align-items:center;
-}
 
-main{
+
+/* main{
   width: 100%;
   padding: 0 5em;
 }
@@ -42,7 +36,6 @@ label{
 }
 
 .formulario-cadastro{
-  /* padding: 50px; */
   width: 65%;
   display: flex;
   flex-direction: column;
@@ -63,7 +56,7 @@ p{
   flex-direction: row;
   align-items:center;
   align-self:flex-end;
-}
+} */
 
 
 a:hover{
