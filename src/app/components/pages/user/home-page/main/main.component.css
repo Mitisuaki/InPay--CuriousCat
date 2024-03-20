@@ -79,17 +79,6 @@
   row-gap: 2.5em;
 }
 
-
-/* Mudança de cor de componentes da página
-
-.texto {
-  color: var(--primary-color-alt);
-}
-
-.dark-theme:is(.texto) {
-  color: #fff !important;
-}*/
-
 @media screen and (max-width: 745px) and (min-width: 0px) {
 
   #balance-box1, #balance-box2{
