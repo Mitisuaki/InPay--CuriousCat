@@ -1,0 +1,129 @@
+section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  perspective: 1000px;
+}
+
+.container-card {
+  position: relative;
+  width: 375px;
+  height: 225px;
+  z-index: var(--z-fixed);
+  transition: .6s;
+  transform-style: preserve-3d;
+}
+
+.container-card:hover {
+  transform: rotateY(180deg);
+}
+
+.container-card .card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  border-radius: 20px;
+  backdrop-filter: blur(25px);
+  background-color: var(--primary-color);
+  backface-visibility: hidden;
+}
+
+/*===== Front-face Card ======*/
+
+.front-face header,
+ .front-face .logo {
+  display: flex;
+  align-items: center;
+ }
+
+ .front-face header {
+  justify-content: space-between;
+ }
+
+.front-face .logo img {
+  width: 48px;
+  margin-right: 10px;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: var(--font-regular);
+}
+
+.front-face .chip {
+  width: 45px;
+}
+
+.front-face .card-details {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+h6 {
+  font-size: .8rem;
+  font-weight: var(--font-regular);
+}
+
+h5.number {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+h5.name {
+  margin-top: 20px;
+}
+
+/*===== Back-face Card ======*/
+
+.card.back-face {
+  border: none;
+  padding: 15px 25px 25px 25px;
+  transform: rotateY(180deg);
+}
+
+.card.back-face h6 {
+  font-size: .5rem;
+}
+
+.card.back-face .magnetic-tarj {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background-color: #000;
+}
+
+.card.back-face .signature {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 56px;
+  width: 85%;
+  height: 40px;
+  border-radius: 6px;
+  background: repeating-linear-gradient(
+    #fff,
+    #fff 3px,
+    #efefef 0px,
+    #efefef 9px);
+}
+
+.card.back-face h5 {
+  margin-top: 15px;
+  font-size: .5rem;
+}
+
+.signature i {
+  margin-right: -30px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  background-color: var(--white-color);
+  font-size: .75rem;
+  color: #000;
+  z-index: -1;
+}
+
