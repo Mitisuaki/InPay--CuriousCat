@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { LandingPageComponent } from './components/pages/landing-page/landing-page.component';
 import { HomePageComponent } from './components/pages/user/home-page/home-page.component';
 import { HistoricoTransacoesComponent } from './components/pages/user/historico-de-transacoes/historico-transacoes/historico-transacoes.component';
 import { CadastroUsuarioComponent } from './components/pages/cadastro-usuario/cadastro-usuario.component';
