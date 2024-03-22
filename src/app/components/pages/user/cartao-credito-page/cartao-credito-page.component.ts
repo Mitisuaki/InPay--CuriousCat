@@ -5,6 +5,7 @@ import { NavMenuCartaoCreditoComponentComponent } from './nav-menu-cartao-credit
 import { InformacaoValoresComponentComponent } from './informacao-valores-component/informacao-valores-component.component';
 import { AcompanhaLimiteComponentComponent } from './acompanha-limite-component/acompanha-limite-component.component';
 import { BotoesControleCartaoComponentComponent } from './botoes-controle-cartao-component/botoes-controle-cartao-component.component';
+import { AtividadesRealizadasComponentComponent } from './atividades-realizadas-component/atividades-realizadas-component.component';
 
 @Component({
   selector: 'cartao-credito-page',
@@ -15,7 +16,8 @@ import { BotoesControleCartaoComponentComponent } from './botoes-controle-cartao
     NavMenuCartaoCreditoComponentComponent,
     InformacaoValoresComponentComponent,
     AcompanhaLimiteComponentComponent,
-    BotoesControleCartaoComponentComponent
+    BotoesControleCartaoComponentComponent,
+    AtividadesRealizadasComponentComponent
    ],
   templateUrl: './cartao-credito-page.component.html',
   styleUrl: './cartao-credito-page.component.css'

@@ -1,9 +1,10 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-atividades-realizadas-component',
+  selector: 'atividades-realizadas-component',
   standalone: true,
-  imports: [],
+  imports: [NgOptimizedImage ],
   templateUrl: './atividades-realizadas-component.component.html',
   styleUrl: './atividades-realizadas-component.component.css'
 })
