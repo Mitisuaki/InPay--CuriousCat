@@ -1,0 +1,265 @@
+[33mcommit 77757b83be996436176802efa45349d198558c1a[m[33m ([m[1;36mHEAD -> [m[1;32mJulio/page/homePage[m[33m, [m[1;31morigin/Julio/page/homePage[m[33m)[m
+Author: jucezar <juliocezar.m.a@gmail.com>
+Date:   Thu Mar 21 15:33:04 2024 -0300
+
+    criação do cartao-credito-component
+
+[33mcommit 0d351d0240c65b4c940e8ae9c5447275d53619d2[m
+Author: jucezar <juliocezar.m.a@gmail.com>
+Date:   Wed Mar 20 02:40:41 2024 -0300
+
+    criando componente cartao-credito
+
+[33mcommit 15359bddba5085563f32d191ba1c2f53c2c5e717[m
+Author: jucezar <juliocezar.m.a@gmail.com>
+Date:   Wed Mar 20 01:35:05 2024 -0300
+
+    Iniciando pagina CreditCardPage
+
+[33mcommit 65fcab1dc94677f07d46aa69edd71b0ee7922d1d[m
+Author: jucezar <juliocezar.m.a@gmail.com>
+Date:   Wed Mar 20 00:21:00 2024 -0300
+
+    Ajuste do modo dark em outras paginas
+
+[33mcommit e163c56f71b2cf09c7986e415be2969a3249a125[m
+Author: jucezar <juliocezar.m.a@gmail.com>
+Date:   Tue Mar 19 21:36:35 2024 -0300
+
+    retirado mudança de background na rolagem da pagina no home-page
+
+[33mcommit a3a023e5f8acf481a6ecc5b394a1a857558a5cf5[m
+Author: jucezar <juliocezar.m.a@gmail.com>
+Date:   Tue Mar 19 20:23:49 2024 -0300
+
+    apagar linha desnecessaria
+
+[33mcommit 2a298266dd1379a7b88ae69f671c1b12c06b05aa[m
+Author: jucezar <juliocezar.m.a@gmail.com>
+Date:   Tue Mar 19 20:13:07 2024 -0300
+
+    Alterando modal login a modo noturno
+
+[33mcommit 08bdb5f5ef0b02df1a9c180b3c9d758b12bc0494[m[33m ([m[1;31morigin/ingrid/page/transacoes[m[33m, [m[1;31morigin/ingrid/page/cadastro[m[33m, [m[1;31morigin/hml[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mingrid/page/cadastro[m[33m)[m
+Author: Miti <mitisuaki@gmail.com>
+Date:   Fri Feb 23 21:03:37 2024 -0300
+
+    Update README.md
+    
+    update deploy
+
+[33mcommit 990a72cd3b86fcd5e29d7057b56129e821b8a25b[m
+Author: Miti <mitisuaki@gmail.com>
+Date:   Fri Feb 23 19:50:10 2024 -0300
+
+    Update README.md
+    
+    Update no link do site
+
+[33mcommit cc82d6eb972d1af4902f542e5b8555d68a652276[m
+Author: Miti <mitisuaki@gmail.com>
+Date:   Fri Feb 23 02:11:36 2024 -0300
+
+    arrumado locais dos arquivos dentro das pastas
+
+[33mcommit 07c2d502202ffca3ada884e4919532ae42b83a1b[m
+Author: Miti <mitisuaki@gmail.com>
+Date:   Fri Feb 23 00:25:55 2024 -0300
+
+    update outputPath
+
+[33mcommit eda6b65d3da834279a94ee0fbd12a6a3e7952a8b[m
+Merge: ca4edd8 2345448
+Author: Miti <mitisuaki@gmail.com>
+Date:   Fri Feb 23 00:05:17 2024 -0300
+
+    Merge branch 'hml' of github.com:Mitisuaki/InPay--CuriousCat into hml
+
+[33mcommit ca4edd84a8e8bb06e6e5ea7cbcce41f7d5edeb42[m
+Author: Miti <mitisuaki@gmail.com>
+Date:   Fri Feb 23 00:05:14 2024 -0300
+
+    deploy needs
+
+[33mcommit 234544815faa06449d7203802b096ad35d732726[m
+Merge: 2095f08 8d4af68
+Author: Miti <mitisuaki@gmail.com>
+Date:   Thu Feb 22 23:43:41 2024 -0300
+
+    Merge pull request #27 from Mitisuaki/documentacao-readme
+    
+    Documentacao readme atualizada
+
+[33mcommit 2095f082f36adf3a64ac1c1702393dc77023ee48[m
+Author: Miti <mitisuaki@gmail.com>
+Date:   Thu Feb 22 23:43:08 2024 -0300
+
+    ajustes finais
+
+[33mcommit 8d4af68b34c2049f1d14e81b66cb2f9b98f2b22a[m[33m ([m[1;31morigin/documentacao-readme[m[33m)[m
+Author: IS Oguro <62152558+IngridOguro@users.noreply.github.com>
+Date:   Thu Feb 22 23:36:37 2024 -0300
+
+    Update README.md
+
+[33mcommit 21e93c4bc1cf4364955feb24c3e7ca18f4a44038[m
+Author: IS Oguro <62152558+IngridOguro@users.noreply.github.com>
+Date:   Thu Feb 22 23:32:45 2024 -0300
+
+    Update README.md
+
+[33mcommit 77bc7135afd0c8b037f7f52bbd0c9471839c6c78[m
+Author: IS Oguro <62152558+IngridOguro@users.noreply.github.com>
+Date:   Thu Feb 22 23:29:02 2024 -0300
+
+    Update README.md
+
+[33mcommit afc86bd5396ab2b846283ed6834080750ab08cb0[m
+Author: Miti <mitisuaki@gmail.com>
+Date:   Thu Feb 22 23:23:17 2024 -0300
+
+    Ajustado problemas de compatibilidade depois do merge
+
+[33mcommit 53c234d99aeb2cd2c2b63239b94a9d438f2c16e0[m
+Merge: e8581fa c326f9a
+Author: Miti <mitisuaki@gmail.com>
+Date:   Thu Feb 22 23:04:42 2024 -0300
+
+    Merge pull request #23 from Mitisuaki/Julio/LandingPage
+    
+    Julio/landing-page
+
+[33mcommit c326f9a0c6d9a427b1ce613d00bbc421a563c336[m
+Merge: 6f0e2f0 e8581fa
+Author: Miti <mitisuaki@gmail.com>
+Date:   Thu Feb 22 23:04:23 2024 -0300
+
+    Merge branch 'hml' into Julio/LandingPage
+
+[33mcommit 5f71db8725a46e360bfdc42da2d1afb6fa08ef23[m
+Author: IS Oguro <62152558+IngridOguro@users.noreply.github.com>
+Date:   Thu Feb 22 22:58:06 2024 -0300
+
+    Update README.md
+
+[33mcommit 6f0e2f0110597ac7aada7312f8f1757ec17cfe2a[m
+Author: Miti <mitisuaki@gmail.com>
+Date:   Thu Feb 22 22:49:53 2024 -0300
+
+    ajustado fundo imagens
+
+[33mcommit c3e421a8dec29472d99dcec9fe3ca43aa1f75d98[m
+Merge: f940355 748b6f7
+Author: Miti <mitisuaki@gmail.com>
+Date:   Thu Feb 22 22:48:26 2024 -0300
+
+    Merge branch 'Julio/LandingPage' of github.com:Mitisuaki/InPay--CuriousCat into Julio/LandingPage
+
+[33mcommit f94035581cdca1dc516516d2e16e31786ce9b3f4[m
+Author: Miti <mitisuaki@gmail.com>
+Date:   Thu Feb 22 22:48:23 2024 -0300
+
+    fix na cor ativa temporario
+
+[33mcommit c3a1cc24591c3073e3e05da64fb8a03c0acd780f[m
+Author: Miti <mitisuaki@gmail.com>
+Date:   Thu Feb 22 22:48:13 2024 -0300
+
+    Ajustado redirecionamento do botão de login
+
+[33mcommit 748b6f7058dfce59b49b8cb174f1f53809a2ca70[m
+Author: jucezar <juliocezar.m.a@gmail.com>
+Date:   Thu Feb 22 22:40:12 2024 -0300
+
+    correção de texto na home
+
+[33mcommit e3fc7b447b061eb71a46e593365d67cadaaf0abc[m
+Author: jucezar <juliocezar.m.a@gmail.com>
+Date:   Thu Feb 22 22:36:58 2024 -0300
+
+    deletada tag da home e corrigido texto na home
+
+[33mcommit e8581fa3a7c0b141c4d81924d6a3145f760319f7[m
+Author: Miti <mitisuaki@gmail.com>
+Date:   Thu Feb 22 22:34:40 2024 -0300
+
+    ajustes no form de cadastro de usuario
+
+[33mcommit b4a201df0c0b7643db68d29efaa96651b72bfb36[m
+Author: jucezar <juliocezar.m.a@gmail.com>
+Date:   Thu Feb 22 22:33:08 2024 -0300
+
+    Mudança no estilo do  botao de newsletter e inclusão de icone no titulo
+
+[33mcommit 860a5b6c3d2a82336d9b0219c03e17b98a14f5c9[m
+Author: jucezar <juliocezar.m.a@gmail.com>
+Date:   Thu Feb 22 22:07:13 2024 -0300
+
+    cores do mmodal-login alteradas
+
+[33mcommit 5c6f787e35ad336c123c159196c97af9c950ee95[m
+Merge: 6cac758 2478f0a
+Author: jucezar <juliocezar.m.a@gmail.com>
+Date:   Thu Feb 22 21:48:02 2024 -0300
+
+    Merge branch 'Julio/LandingPage' of https://github.com/Mitisuaki/CuriousCat-Pay into Julio/LandingPage
+
+[33mcommit 6cac758cea2ee0ec28f01d5b93762f2d4cf6e700[m
+Author: jucezar <juliocezar.m.a@gmail.com>
+Date:   Thu Feb 22 21:47:52 2024 -0300
+
+    Ajustando cores da secao JOIN
+
+[33mcommit e1538839b15b705d166ee8961ec25cf6a4d62cb1[m
+Merge: 0a925ab fb600ac
+Author: Miti <mitisuaki@gmail.com>
+Date:   Thu Feb 22 21:37:20 2024 -0300
+
+    Merge pull request #26 from Mitisuaki/ingrid/page/cadastro-usuario
+    
+    Ingrid/page/cadastro usuario
+
+[33mcommit fb600acd37658d0e5d613bb6c79dd77730aa04f1[m[33m ([m[1;31morigin/ingrid/page/cadastro-usuario[m[33m)[m
+Author: IS Oguro <ingrid.shizue@gmail.com>
+Date:   Thu Feb 22 20:59:03 2024 -0300
+
+    mensagem de validação ajustada
+
+[33mcommit 0a925ab4b6ca49fd3153b960cd90648f45bf4f13[m
+Author: Miti <mitisuaki@gmail.com>
+Date:   Thu Feb 22 19:36:13 2024 -0300
+
+    Ajuste no titulo da pagina
+
+[33mcommit 4c58774735a8b7bc8bb8c1784a4715d4cd124990[m
+Author: IS Oguro <ingrid.shizue@gmail.com>
+Date:   Thu Feb 22 18:40:17 2024 -0300
+
+    validação celular
+
+[33mcommit 62d86853271069d0c887d72cefe9b1231c169990[m
+Author: IS Oguro <ingrid.shizue@gmail.com>
+Date:   Thu Feb 22 18:23:39 2024 -0300
+
+    validação de nome completo ajustada
+    
+    validação de nome completo ajustada com regexp
+
+[33mcommit 195588ba8ef74547fbdddc23e783e6d01be0387f[m
+Author: IS Oguro <ingrid.shizue@gmail.com>
+Date:   Thu Feb 22 18:13:58 2024 -0300
+
+    validação
+    
+    validação dos campos de cadastro,
+    limitação de input com html
+
+[33mcommit a5261595c7fbcc1176764088f0181aa5d8b977f6[m
+Author: IS Oguro <ingrid.shizue@gmail.com>
+Date:   Thu Feb 22 16:34:36 2024 -0300
+
+    add header e footer
+    
+    problema com a imagem
+
+[33mcommit 4e4f9cc478c5c073a1d5bf193305d52f8c7152

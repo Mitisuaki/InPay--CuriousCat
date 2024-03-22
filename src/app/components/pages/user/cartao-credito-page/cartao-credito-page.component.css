@@ -1,0 +1,12 @@
+
+@media screen and (max-width: 768px) {
+
+  .coluna-1 {
+    margin-top: 3rem !important;
+  }
+
+  .coluna-2 {
+    margin-top: -4rem !important;
+  }
+
+}

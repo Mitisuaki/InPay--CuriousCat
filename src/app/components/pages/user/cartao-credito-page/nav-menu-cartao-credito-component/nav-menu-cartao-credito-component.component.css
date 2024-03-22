@@ -1,0 +1,161 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: hsl(240, 21%, 11%);
+  z-index: var(--z-fixed);
+  transition: box-shadow .4s, background-color .4s;
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_logo {
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  color: var(--first-color);
+  font-weight: var(--font-medium);
+}
+
+/*.nav_logo i {
+  font-size: 1.25rem;
+}*/
+
+.nav_logo .logo {
+  width: 80px;
+}
+
+
+@media screen and (max-width: 1150px) {
+
+  .nav_menu {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background-color: hsl(240, 21%, 11%);
+      box-shadow: 0 -8px 32px hsla(0, 0%, 0%, .1);
+      padding: 1.25rem 4rem;
+      transition: background-color .4s;
+  }
+}
+
+.nav_list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_link {
+  color: var(--white-color);
+  transition: color .4s;
+}
+
+.nav_link span {
+  display: none;
+}
+
+.nav_link i {
+  font-size: 1.25rem;
+}
+
+.nav_link:hover {
+  color: var(--primary-color);
+}
+
+.nav_actions {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.nav_actions i {
+  font-size: 1.25rem;
+  color: var(--white-color);
+  cursor: pointer;
+  transition: color .4s;
+}
+
+.nav_actions i:hover {
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 320px) {
+
+  .nav_menu {
+      padding-inline: 3rem;
+  }
+
+}
+
+@media screen and (max-width: 470px) {
+
+  .user_photo {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 575px) {
+
+  .container {
+    margin-left: 1rem !important;
+  }
+
+  .nav_actions {
+    margin-right:  1rem !important;
+  }
+}
+
+@media screen and (min-width: 576px) {
+
+  .nav_menu {
+      width: 100%;
+      margin-inline: auto;
+  }
+
+}
+
+@media screen and (min-width: 1150px) {
+
+  .section {
+      padding-block: 7rem 2rem;
+  }
+
+  .nav {
+      height: calc(var(--header-height) + 2rem);
+      column-gap: 4rem;
+  }
+
+  .nav_link i {
+      display: none;
+  }
+
+  .nav_link span {
+      display: block;
+  }
+
+  .nav_menu {
+      width: initial;
+      margin-inline: auto 0;
+  }
+
+  .nav_list {
+      column-gap: 4rem;
+  }
+
+  .nav_link {
+      font-weight: var(--font-medium);
+  }
+
+  .dark-theme .nav_menu {
+      box-shadow: none;
+  }
+}
+
