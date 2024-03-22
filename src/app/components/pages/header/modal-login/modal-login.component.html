@@ -7,8 +7,8 @@
         <form [formGroup]="formulario" (submit)="autenticar()" novalidate class="formulario-cadastro p-5 d-flex flex-column">
           <!-- Email -->
           <div class="form-floating m-2 w-75 ms-5" >
-            <input (input)="inputChanged('input_email',$event)" type="email" id="email" class="form-control-sm" formControlName="email" class="form-control bg-dark text-light rounded-0 ">q
-            
+            <input (input)="inputChanged('input_email',$event)" type="email" id="email" class="form-control-sm" formControlName="email" class="form-control bg-dark text-light rounded-0 ">
+
             <label for="email" class="form-label text-light text-opacity-75" id="label1">Email</label>
             <div *ngIf="inputValues['input_email'] !== ''">
               </div>
