@@ -7,6 +7,6 @@ import { HomeComponent } from './components/pages/home/home.component';
 export const routes: Routes = [
   {path:"user/home-page", component: HomePageComponent},
   {path:"user/transactions", component: HistoricoTransacoesComponent},
-  {path:"cadastro", component: CadastroUsuarioComponent},
+  {path:"sign-up", component: CadastroUsuarioComponent},
   {path:"", component: HomeComponent}
 ];
