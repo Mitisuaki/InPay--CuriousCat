@@ -1,43 +1,25 @@
- <header class="header" id="header">
-  <nav class="nav container">
-      <a href="#" class="nav_logo">
-          <span>
-            <img ngSrc="assets/user-home-page/logo-InPay-branco.png" alt="logo_inpay" width="80" height="42" priority/>
-          </span>
-      </a>
+<nav class="navbar navbar-expand-lg bg-dark py-3 ">
+  <div class="container-fluid justify-content-end">
+    <button class="navbar-toggler bg-info" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end pe-5" id="navbarSupportedContent">
+      <ul class="navbar-nav d-flex align-items-center">
+        <li class="nav-item">
+          <a id="nav-op" class="nav-link active text-info fs-6" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a id="nav-op" class="nav-link text-light fs-6" href="#">Documentação</a>
+        </li>
+        <li class="nav-item">
+          <a id="nav-op" class="nav-link text-light fs-6" href="sign-up">Cadastro</a>
+        </li>
+        <li class="nav-item">
+          <a id="nav-op" class="nav-link text-light fs-6" href="#">Login</a>
+        </li>
 
-      <div class="nav_menu pt-4" id="nav-menu">
-          <ul class="nav_list">
-              <li class="nav_item">
-                  <a href="#home" class="nav_link">Home</a>
-              </li>
-              <li class="nav_item">
-                  <a href="#popular" class="nav_link">Soluções</a>
-              </li>
-              <li class="nav_item">
-                  <a href="#choose" class="nav_link">Perguntas</a>
-              </li>
-              <li class="nav_item">
-                  <a href="#products" class="nav_link">Newsletter</a>
-              </li>
-          </ul>
 
-          <!--btn close-->
-          <div class="nav_close" id="nav-close">
-              <i class="ri-close-line"></i>
-          </div>
-      </div>
-
-          <div class="nav_buttons">
-              <!-- login button-->
-              <a href="" class="ri-user-line change-theme" id="login-button" title="login"></a>
-              <!-- theme button-->
-              <i class="ri-moon-line change-theme ri-sun-line" id="theme-button" (click)="changeDarkLightMode($event)"></i>
-
-              <!-- btn toggle-->
-              <div class="nav_toggle" id="nav-toggle">
-                  <i class="ri-menu-line"></i>
-              </div>
-          </div>
-  </nav>
-</header>
+      </ul>
+    </div>
+  </div>
+</nav>
