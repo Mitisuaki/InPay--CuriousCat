@@ -16,3 +16,13 @@
 
 
 }
+
+@media screen and (max-width: 1390px){
+
+
+  .coluna-3 {
+    margin-top: 1rem !important;
+  }
+
+
+}
