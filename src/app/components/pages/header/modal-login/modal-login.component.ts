@@ -48,4 +48,8 @@ export class ModalLoginComponent {
     this.inputValues[inputName] = event.target.value;
     }
 
+  clearMessage():void{
+    this.mensagem = "";
+  }
+
 }
