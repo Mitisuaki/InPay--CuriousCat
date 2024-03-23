@@ -1,26 +1,26 @@
 <app-header></app-header>
-<main class=" d-flex flex-md-row flex-column bg-dark w-100 pt-1 pb-5 px-5">
-  <div class="left-section w-50 d-flex flex-column pt-5 pe-5" >
-      <img class="object-fit-cover pt-1" src="../../../../assets/titulo.png" width="100%" alt="">
+<main class=" d-flex flex-md-row flex-column bg-dark w-100 px-5 pt-5">
+  <div class="left-section w-75 d-flex flex-column justify-content-center align-content-center pe-5" >
+      <img class="object-fit-cover pt-3" src="../../../../assets/titulo.png" width="100%" alt="">
   </div>
-  <div class="left-section mx-2 w-50 pt-2">
+  <div class="left-section mx-2 w-100 d-flex flex-column justify-content-center align-content-center">
           <!-- FORMULARIO DE CADASTRO -->
-        <form [formGroup]="formulario" (submit)="autenticar()" novalidate class="formulario-cadastro p-5 d-flex flex-column gap-3">
-          <div class="titulo">
+        <form [formGroup]="formulario" (submit)="autenticar()" novalidate class="formulario-cadastro ps-5 d-flex flex-column gap-2">
+          <div>
             <h2 class="text-light fw-light">Cadastre-se</h2>
           </div>
 
           <!-- NOME -->
-        <div class="form-floating p-1">
-          <input  (input)="inputChanged('input_nickname',$event)" type="text" id="nickname" class="form-control" formControlName="nickname" placeholder="yunkimin_01" >
-          <label class="form-label" for="nickname">Nickname</label>
-          <div *ngIf="inputValues['input_nickname'] !== ''">
-          <p *ngIf="formulario.get('nickname')?.hasError('pattern')">Informe um nickname válido</p>
+        <div class="form-floating p-2">
+          <input  (input)="inputChanged('input_username',$event)" type="text" id="username" class="form-control" formControlName="username" placeholder="yunkimin_01" >
+          <label class="form-label" for="username">Username</label>
+          <div *ngIf="inputValues['input_username'] !== ''">
+          <p *ngIf="formulario.get('username')?.hasError('pattern')">Informe um username válido</p>
           </div>
         </div>
 
         <!-- EMAIL -->
-        <div class="form-floating p-1">
+        <div class="form-floating p-2">
         <input (input)="inputChanged('input_email',$event)" type="email" id="email" class="form-control" formControlName="email" placeholder="usuario@mail.com" >
         <label class="form-label" for="email">Email</label>
         <div *ngIf="inputValues['input_email'] !== ''">
@@ -30,7 +30,7 @@
         </div>
 
         <!-- CELULAR -->
-        <div class="form-floating p-1">
+        <div class="form-floating p-2">
         <input (input)="inputChanged('input_celular',$event)" type="texto" id="celular" class="form-control" formControlName="celular" placeholder="94002-8922" >
         <label class="form-label" for="celular">Celular</label>
         <div *ngIf="inputValues['input_celular'] !== ''">
@@ -40,19 +40,20 @@
         </div>
 
         <!-- SENHA -->
-        <div class="form-floating p-1">
+        <div class="form-floating p-2">
         <input type="password"  id="senha" class="form-control" formControlName="senha" placeholder="******"  >
         <label class="form-label" for="senha">Senha</label>
+        <p *ngIf="formulario.get('senha')?.hasError('pattern')">Informe senha válida</p>
         </div>
 
         <!-- CONFIRMAÇÃO DE SENHA -->
-        <div class="form-floating p-1">
+        <div class="form-floating p-2">
         <input type="password" id="confirmarSenha"  class="form-control" formControlName="confirmarSenha" placeholder="******"  >
         <label class="form-label" for="confirmarSenha">Confirme sua senha</label>
         <p class="mensagem-de-erro">{{mensagem}}</p>
         </div>
 
-        <div class="form-check p-1 ms-4 d-flex justify-content-end">
+        <div class="form-check px-2 ms-4 d-flex justify-content-end">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"  formControlName="termos">
           <label class="form-check-label text-light" for="flexCheckDefault">
             &nbsp;Aceito os
