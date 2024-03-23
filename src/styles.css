@@ -1,5 +1,6 @@
 /*================ GOOGLE FONTS ===============*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;1,400&family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
 /*================= VARIAVEIS ================*/
 :root {
@@ -107,6 +108,15 @@ body {
   transition: background .4s;
 }
 
+/* Variavel Dark Theme */
+
+body.dark-theme {
+  --title-color: hsl(0, 0%, 95%);
+  --text-color: hsl(0, 0%, 70%);
+  --body-color: hsl(240, 21%, 11%);
+  --container-color: hsl(0, 0, 15%);
+}
+
 input,
 button {
   border: none;
@@ -145,7 +155,6 @@ img {
 
 .container {
   max-width: 1120px;
-  margin-inline: 1.5rem;
 }
 
 .grid {

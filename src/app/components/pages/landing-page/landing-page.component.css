@@ -30,6 +30,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  margin-left: 1rem;
 }
 
 .nav_logo span img {
@@ -781,6 +782,7 @@ color: var(--title-color);
   color: var(--primary-color);
 }
 
+
 /* Variavel Dark Theme */
 
 body.dark-theme {
@@ -797,7 +799,7 @@ body.dark-theme {
 }
 
 .dark-theme:is(.home_shadow) {
-background: hsla(15, 60%, 52%, .4);
+  background: hsla(15, 60%, 52%, .4);
 }
 
 .dark-theme:is(.popular_card:hover, .features_info-card:hover, .products_card:hover) {

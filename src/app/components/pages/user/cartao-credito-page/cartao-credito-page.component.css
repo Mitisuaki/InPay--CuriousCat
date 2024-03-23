@@ -1,0 +1,28 @@
+
+@media screen and (max-width: 550px) {
+
+  .coluna-1 {
+    margin-top: 2rem !important;
+    padding: 2rem 0;
+  }
+
+  .coluna-2 {
+    margin-top: -3rem !important;
+  }
+
+  .coluna-3 {
+    margin-top: 1rem !important;
+  }
+
+
+}
+
+@media screen and (max-width: 1390px){
+
+
+  .coluna-3 {
+    margin-top: 1rem !important;
+  }
+
+
+}
