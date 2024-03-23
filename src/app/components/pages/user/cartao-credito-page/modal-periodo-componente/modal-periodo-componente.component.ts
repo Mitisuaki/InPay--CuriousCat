@@ -1,9 +1,10 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-modal-periodo-componente',
+  selector: 'modal-periodo-componente',
   standalone: true,
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: './modal-periodo-componente.component.html',
   styleUrl: './modal-periodo-componente.component.css'
 })
