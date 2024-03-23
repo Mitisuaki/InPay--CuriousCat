@@ -13,3 +13,7 @@ a:hover{
   color:deepskyblue;
 }
 
+.form-floating > input + label:after {
+ background: transparent !important;
+}
+
