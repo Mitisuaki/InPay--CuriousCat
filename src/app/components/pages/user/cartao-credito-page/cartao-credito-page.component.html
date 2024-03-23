@@ -1,16 +1,21 @@
 <!-- Menu -->
 <navmenu-cartao-credito-component></navmenu-cartao-credito-component>
 
-<main class="container-fluid overflow-hidden">
-
-   <div class="row mt-5 pt-3">
-       <h2 class="text-center">
-         <i class="ri-bank-card-line"></i>
-          Meu Cartão
-       </h2>
+<div class="container">
+  <div class="row mt-5">
+    <div class="col mt-5">
+      <h3 class="text-center">
+        <i class="ri-bank-card-line"></i>
+        Meu Cartão
+      </h3>
+    </div>
   </div>
+</div>
 
-  <div class="row gy-5 d-flex justify-content-center">
+
+<main class="container overflow-hidden">
+
+  <div class="row d-flex justify-content-center">
 
     <!-- Cartao Credito-->
     <div class="col coluna-1 d-flex justify-content-center mt-5">
@@ -28,12 +33,12 @@
     </div>
 
     <!-- Botoes de Serviços-->
-    <div class="col-xxl-4">
+    <div class="col-xxl-4 coluna-3">
       <botoes-controle-cartao-component></botoes-controle-cartao-component>
     </div>
 
     <!-- Atividades Realizadas -->
-    <div class="col-xxl-4">
+    <div class="col-xxl-4 coluna-3">
       <div class="card d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-start">
         <atividades-realizadas-component></atividades-realizadas-component>
         <duvidas-faq-component></duvidas-faq-component>
@@ -42,3 +47,4 @@
 
   </div>
 </main>
+<footer-cartao-credito-page-component></footer-cartao-credito-page-component>
