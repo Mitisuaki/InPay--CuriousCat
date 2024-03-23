@@ -6,6 +6,8 @@ import { InformacaoValoresComponentComponent } from './informacao-valores-compon
 import { AcompanhaLimiteComponentComponent } from './acompanha-limite-component/acompanha-limite-component.component';
 import { BotoesControleCartaoComponentComponent } from './botoes-controle-cartao-component/botoes-controle-cartao-component.component';
 import { AtividadesRealizadasComponentComponent } from './atividades-realizadas-component/atividades-realizadas-component.component';
+import { DuvidasFaqComponentComponent } from './duvidas-faq-component/duvidas-faq-component.component';
+
 
 @Component({
   selector: 'cartao-credito-page',
@@ -17,7 +19,8 @@ import { AtividadesRealizadasComponentComponent } from './atividades-realizadas-
     InformacaoValoresComponentComponent,
     AcompanhaLimiteComponentComponent,
     BotoesControleCartaoComponentComponent,
-    AtividadesRealizadasComponentComponent
+    AtividadesRealizadasComponentComponent,
+    DuvidasFaqComponentComponent,
    ],
   templateUrl: './cartao-credito-page.component.html',
   styleUrl: './cartao-credito-page.component.css'
