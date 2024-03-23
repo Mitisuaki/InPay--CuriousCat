@@ -1,10 +1,10 @@
 <main class=" d-flex flex-md-row flex-column bg-dark w-100 pt-1 pb-5">
-  <div class="left-section mx-4 my-5 w-75">
-      <img class="mt-2" src="../../../../assets/titulo.png" alt="">
+  <div class="left-section mx-5 my-5 w-75">
+      <img class="mt-5 ms-4" src="../../../../assets/titulo.png" alt="">
   </div>
   <div class="left-section mx-4 w-75">
-            <!-- FORMULARIO DE CADASTRO -->
-        <form [formGroup]="formulario" (submit)="autenticar()" novalidate class="formulario-cadastro p-5">
+          <!-- FORMULARIO DE CADASTRO -->
+        <form [formGroup]="formulario" (submit)="autenticar()" novalidate class="formulario-cadastro p-5 d-flex flex-column gap-3">
           <div class="titulo">
             <h2 class="text-light fw-light">Cadastre-se</h2>
           </div>
@@ -51,14 +51,18 @@
         <p class="mensagem-de-erro">{{mensagem}}</p>
         </div>
 
-        <div id="termos-container">
-            <input type="checkbox" class="form-check m-1 d-inline" formControlName="termos">
-            <label class="d-inline">
-            Aceito os <a class=" d-inline text-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Termos de uso</a>
+        <div class="form-check p-1 ms-4 d-flex justify-content-end">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"  formControlName="termos">
+          <label class="form-check-label" for="flexCheckDefault">&nbsp;
+            Aceito os&nbsp;
+                <a class="text-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Termos de uso.
+                </a>
           </label>
         </div>
-        <div class="p-2 w-100">
-          <input id="cadastrar" type="submit" value="Cadastrar" class="btn btn-primary bg-info text-dark p-3 mt-2 mb-3" [disabled]="formulario.invalid">
+
+        <div class=" w-100 d-flex justify-content-center">
+          <input id="cadastrar" type="submit" value="Cadastrar" class="btn btn-primary bg-info text-dark py-3 px-5 mt-2 mb-3" [disabled]="formulario.invalid">
         </div>
         </form>
   </div>
