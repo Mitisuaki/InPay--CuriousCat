@@ -27,7 +27,7 @@ export class ModalLoginComponent {
     if(
       this.formulario.value.senha === this.senha_banco && this.formulario.value.email === this.email_banco
       ){
-        this.rota.navigateByUrl('user/home-page');
+        this.rota.navigateByUrl('user/account');
         document.getElementById("closeModal")?.click();
           }else if(this.formulario.value.senha === this.senha_banco && this.formulario.value.email !== this.email_banco
           ){
