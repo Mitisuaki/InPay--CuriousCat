@@ -1,10 +1,11 @@
 import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
+import { ModalLoginComponent } from './modal-login/modal-login.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgOptimizedImage],
+  imports: [NgOptimizedImage, ModalLoginComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
