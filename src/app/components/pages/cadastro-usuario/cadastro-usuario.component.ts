@@ -16,10 +16,10 @@ import { TermosDeUsoModalComponent } from '../termos-de-uso-modal/termos-de-uso-
 export class CadastroUsuarioComponent {
   // formulário
   formulario = new FormGroup({
-    nickname: new FormControl('', [Validators.required ,Validators.pattern(/^[^0-9][^@#]+$/)]),
+    username: new FormControl('', [Validators.required ,Validators.pattern(/^[^0-9][^@#]+$/)]),
     email: new FormControl('', [Validators.required, Validators.email]),
     celular: new FormControl('', [Validators.required,Validators.pattern(/^\d{10}/)] ),
-    senha: new FormControl('', [Validators.required]),
+    senha: new FormControl('', [Validators.required,Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/)]),
     confirmarSenha: new FormControl('', [Validators.required]),
     termos: new FormControl('', [Validators.required]),
 
@@ -43,7 +43,7 @@ export class CadastroUsuarioComponent {
   }
 
   inputValues: { [key: string]: string } = {
-    input_nome: '',
+    input_username: '',
     input_cpf:'',
     input_email: '',
     input_celular:''
@@ -54,3 +54,4 @@ export class CadastroUsuarioComponent {
   }
 
 }
+
