@@ -28,6 +28,7 @@ export class ModalLoginComponent {
       this.formulario.value.senha === this.senha_banco && this.formulario.value.email === this.email_banco
       ){
         this.rota.navigateByUrl('user/home-page');
+        document.getElementById("closeModal")?.click();
           }else if(this.formulario.value.senha === this.senha_banco && this.formulario.value.email !== this.email_banco
           ){
             this.mensagem = "Email incorreto!"
@@ -51,5 +52,7 @@ export class ModalLoginComponent {
   clearMessage():void{
     this.mensagem = "";
   }
+
+}
 
 }
