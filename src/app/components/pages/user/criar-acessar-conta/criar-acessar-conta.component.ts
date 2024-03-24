@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserHeaderComponent } from '../user-header/user-header.component';
+import { UserHeaderComponent } from '../../user-header/user-header.component';
 
 @Component({
   selector: 'app-criar-acessar-conta',
