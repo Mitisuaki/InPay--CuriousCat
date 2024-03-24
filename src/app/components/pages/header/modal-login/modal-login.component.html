@@ -2,9 +2,12 @@
 <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content bg-dark">
+      <div class="d-flex justify-content-end p-3">
+        <button type="button" id="closeModal" [hidden]="true" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
       <div class="modal-body">
         <!-- Formulario -->
-        <form [formGroup]="formulario" (submit)="autenticar()" novalidate class="formulario-cadastro p-5 d-flex flex-column">
+        <form [formGroup]="formulario" (submit)="autenticar()" novalidate class="formulario-cadastro px-5 mb-5 d-flex flex-column">
           <!-- Email -->
           <div class="form-floating m-2 w-75 ms-5" >
             <input (input)="inputChanged('input_email',$event); clearMessage()" type="email" id="email" class="form-control-sm" formControlName="email" class="form-control bg-dark text-light rounded-0 ">
