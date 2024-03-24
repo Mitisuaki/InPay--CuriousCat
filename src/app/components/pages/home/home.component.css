@@ -15,3 +15,7 @@ span{
 #divider{
   height: 2px;
 }
+
+span:hover{
+cursor:pointer;
+}
