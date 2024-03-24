@@ -1,0 +1,17 @@
+*{
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+main{
+  height: 100%;
+}
+
+span{
+  text-decoration: underline;
+}
+
+#divider{
+  height: 2px;
+}

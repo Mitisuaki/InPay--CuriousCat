@@ -2,8 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserHomePageHeaderComponent } from "../user/header/header.component";
-import { UserHomePageFooterComponent } from "../footer/footer.component";
 import { HeaderComponent } from "../header/header.component";
 import { TermosDeUsoModalComponent } from '../termos-de-uso-modal/termos-de-uso-modal.component';
 
@@ -13,7 +11,7 @@ import { TermosDeUsoModalComponent } from '../termos-de-uso-modal/termos-de-uso-
     standalone: true,
     templateUrl: './cadastro-usuario.component.html',
     styleUrl: './cadastro-usuario.component.css',
-    imports: [CommonModule, ReactiveFormsModule, UserHomePageHeaderComponent, UserHomePageFooterComponent, HeaderComponent,TermosDeUsoModalComponent]
+    imports: [CommonModule, ReactiveFormsModule, HeaderComponent,TermosDeUsoModalComponent]
 })
 export class CadastroUsuarioComponent {
   // formulário
