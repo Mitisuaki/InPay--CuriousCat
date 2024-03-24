@@ -3,10 +3,12 @@ import { HistoricoTransacoesComponent } from './components/pages/user/historico-
 import { CadastroUsuarioComponent } from './components/pages/cadastro-usuario/cadastro-usuario.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { AccessAccountComponent } from './components/pages/user/access-account/access-account.component';
+import { AccountHomeComponent } from './components/pages/user/account-home/account-home.component';
 
 export const routes: Routes = [
-  {path:"user/transactions", component: HistoricoTransacoesComponent},
+  {path:"", component: HomeComponent},
   {path:"sign-up", component: CadastroUsuarioComponent},
+  {path:"user/transactions", component: HistoricoTransacoesComponent},
   {path:"user/account",component: AccessAccountComponent},
-  {path:"", component: HomeComponent}
+  {path:"account-home",component: AccountHomeComponent}
 ];
