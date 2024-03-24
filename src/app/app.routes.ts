@@ -7,9 +7,10 @@ import { AccessAccountComponent } from './components/pages/user/access-account/a
 import { AccountHomeComponent } from './components/pages/user/account-home/account-home.component';
 
 export const routes: Routes = [
-  {path:"", component: HomeComponent},
-  {path:"sign-up", component: CadastroUsuarioComponent},
+  {path:"", component: HomeComponent}, //home
+  {path:"sign-up", component: CadastroUsuarioComponent}, //cadastro-usuario
+  {path:"user/account",component: AccessAccountComponent}, //acessar-conta
+  {path:"user/register-account", component: CadastroContaComponent}, //cadastrar-conta
+  {path:"account-home",component: AccountHomeComponent}, //inicio-conta
   {path:"user/transactions", component: HistoricoTransacoesComponent},
-  {path:"user/register-account", component: CadastroContaComponent},
-  {path:"user/account",component: AccessAccountComponent},
-  {path:"account-home",component: AccountHomeComponent}];
+];
