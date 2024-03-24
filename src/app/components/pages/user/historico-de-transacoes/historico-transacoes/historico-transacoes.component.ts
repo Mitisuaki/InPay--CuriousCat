@@ -1,7 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { UserHomePageFooterComponent } from "../../../footer/footer.component";
-import { UserHomePageHeaderComponent } from "../../header/header.component";
 
 interface Transaction {
   transaction_id:number ,
@@ -17,7 +15,7 @@ interface Transaction {
     standalone: true,
     templateUrl: './historico-transacoes.component.html',
     styleUrl: './historico-transacoes.component.css',
-    imports: [CommonModule, UserHomePageFooterComponent, UserHomePageHeaderComponent]
+    imports: [CommonModule]
 })
 export class HistoricoTransacoesComponent {
 // TABELA DE TRANSAÇÕES
