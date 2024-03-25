@@ -5,17 +5,17 @@
   </div>
   <div class="left-section mx-2 w-50 pt-2">
           <!-- FORMULARIO DE CADASTRO -->
-        <form [formGroup]="formulario" (submit)="autenticar()" novalidate class="formulario-cadastro p-5 d-flex flex-column gap-3">
+        <form [formGroup]="formulario" (submit)="autenticar()" (submit)="obterEndereco()" novalidate class="formulario-cadastro p-5 d-flex flex-column gap-3">
           <div class="titulo">
             <h2 class="text-light fw-light">Cadastre-se</h2>
           </div>
 
           <!-- NOME -->
         <div class="form-floating p-1">
-          <input  (input)="inputChanged('input_nickname',$event)" type="text" id="nickname" class="form-control" formControlName="nickname" placeholder="yunkimin_01" >
-          <label class="form-label" for="nickname">Nickname</label>
-          <div *ngIf="inputValues['input_nickname'] !== ''">
-          <p *ngIf="formulario.get('nickname')?.hasError('pattern')">Informe um nickname válido</p>
+          <input  (input)="inputChanged('input_username',$event)" type="text" id="username" class="form-control" formControlName="username" placeholder="yunkimin_01" >
+          <label class="form-label" for="username">Username</label>
+          <div *ngIf="inputValues['input_username'] !== ''">
+          <p *ngIf="formulario.get('username')?.hasError('pattern')">Informe um username válido</p>
           </div>
         </div>
 
@@ -38,6 +38,15 @@
         <p *ngIf="formulario.get('celular')?.hasError('pattern')">Informe um numero válido</p>
         </div>
         </div>
+
+        <!-- CEP -->
+        <div class="form-floating p-1">
+          <input (input)="inputChanged('input_cep',$event)" type="texto" id="cep" class="form-control" formControlName="cep" placeholder="94002-8922" >
+          <label class="form-label" for="cep">CEP</label>
+          <div *ngIf="inputValues['input_cep'] !== ''">
+          <p *ngIf="formulario.get('cep')?.hasError('required')">Informe seu cep</p>
+          </div>
+          </div>
 
         <!-- SENHA -->
         <div class="form-floating p-1">

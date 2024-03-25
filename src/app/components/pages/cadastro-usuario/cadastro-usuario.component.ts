@@ -4,6 +4,7 @@ import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angula
 import { Router } from '@angular/router';
 import { HeaderComponent } from "../header/header.component";
 import { TermosDeUsoModalComponent } from '../termos-de-uso-modal/termos-de-uso-modal.component';
+import { EnderecoService } from '../../../services/endereco/endereco.service';
 
 
 @Component({
@@ -16,9 +17,10 @@ import { TermosDeUsoModalComponent } from '../termos-de-uso-modal/termos-de-uso-
 export class CadastroUsuarioComponent {
   // formulário
   formulario = new FormGroup({
-    nickname: new FormControl('', [Validators.required ,Validators.pattern(/^[^0-9][^@#]+$/)]),
+    username: new FormControl('', [Validators.required ,Validators.pattern(/^[^0-9][^@#]+$/)]),
     email: new FormControl('', [Validators.required, Validators.email]),
     celular: new FormControl('', [Validators.required,Validators.pattern(/^\d{10}/)] ),
+    cep: new FormControl('',[Validators.required]),
     senha: new FormControl('', [Validators.required]),
     confirmarSenha: new FormControl('', [Validators.required]),
     termos: new FormControl('', [Validators.required]),
@@ -28,7 +30,7 @@ export class CadastroUsuarioComponent {
   mensagem:string="";
 
   // Construtor
-  constructor(private rota:Router){}
+  constructor(private rota:Router, private service:EnderecoService){}
 
   // Função para autenticar
   autenticar():void{
@@ -52,5 +54,15 @@ export class CadastroUsuarioComponent {
   inputChanged(inputName: string, event: any) {
     this.inputValues[inputName] = event.target.value;
   }
+
+  // endereco
+    // Variével cep
+    cep:string = '';
+
+    // função endereço
+    obterEndereco():void{
+      this.service.retornarEndereco(this.cep)
+      .subscribe((retorno: any) => {console.log(retorno)});
+    }
 
 }
