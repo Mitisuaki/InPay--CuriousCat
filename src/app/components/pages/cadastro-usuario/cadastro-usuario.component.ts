@@ -40,9 +40,9 @@ export class CadastroUsuarioComponent {
   mensagem:string="";
   autenticar():void{
     if(
-      this.formulario.value.senha === this.formulario.value.confirmarSenha
-      ){        // Redirecionamento
+      this.formulario.value.senha === this.formulario.value.confirmarSenha){
         this.rota.navigateByUrl('user/account');
+        console.log(this.cadastrarUsuario())
       }else{
         this.mensagem ="Senhas não coincidem";
       }
@@ -66,12 +66,9 @@ export class CadastroUsuarioComponent {
     this.inputValues[inputName] = event.target.value;
   }
 
+  UserCadastrado = "";
 
-  title = 'teste';
-
-  userLoggedToken= "";
-
-  async fazerTeste(){
+  async cadastrarUsuario(){
 
     const request = await fetch('http://localhost:5066/register',{
     headers: {
@@ -90,22 +87,11 @@ export class CadastroUsuarioComponent {
 
     })
     });
+
     const show = await request.json();
 
-    this.userLoggedToken = show.userToken
-    console.log(show)
+    this.UserCadastrado = show.userName
+    return this.UserCadastrado
+
   }
-  // async getUserByID(){
-
-  //   const request = await fetch('http://localhost:5066/user/6d96b8e3-033d-473e-8c4e-323b2ef31a40',{
-  //   headers: {
-  //     'Accept': 'application/json',
-  //     'Content-Type': 'application/json',
-  //     'Authorization': `Bearer ${this.userLoggedToken}`
-  //   },
-  //   method: "GET"
-  //   });
-  //   const show = await request.json();
-
-  //   console.log(show)
   }
