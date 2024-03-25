@@ -22,12 +22,22 @@ export class ModalLoginComponent {
   senha_banco:string="@Aa12345";
 
   mensagem:string="";
-  // Função para autenticar credenciais
-  autenticar():void{
-    const resposta = this.fazerTeste();
-    console.log(resposta)
+  userLogado:string="";
 
+  // LOGIN
+  async autenticar(){
+    try {
+      const resposta = await this.fazerTeste();
+      console.log("Token do usuário:", resposta.userToken);
+      this.userLogado = resposta.userName
+      //direcionamento
+      this.rota.navigateByUrl('user/account');
+      document.getElementById("closeModal")?.click();
+
+    } catch (error) {
+      this.mensagem = "Credenciais incorretas!"
     }
+  }
 
   inputValues: { [key: string]: string } = {
     input_email: '',
