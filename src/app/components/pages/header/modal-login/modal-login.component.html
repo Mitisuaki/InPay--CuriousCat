@@ -10,7 +10,7 @@
         <form [formGroup]="formulario" (submit)="autenticar()" novalidate class="formulario-cadastro px-5 mb-5 d-flex flex-column">
           <!-- Email -->
           <div class="form-floating m-2 w-75 ms-5" >
-            <input (input)="inputChanged('input_email',$event); clearMessage()" type="email" id="email" class="form-control-sm" formControlName="email" class="form-control bg-dark text-light rounded-0 ">
+            <input (input)="inputChanged('input_email',$event); clearMessage()" type="email" id="login_email" class="form-control-sm" formControlName="email" class="form-control bg-dark text-light rounded-0 ">
 
             <label for="email" class="form-label text-light text-opacity-75" id="label1" >Email</label>
             <div *ngIf="inputValues['input_email'] !== ''">
@@ -18,7 +18,7 @@
           </div>
           <!-- Senha -->
           <div class="form-floating m-2 w-75 ms-5">
-            <input type="password"  id="senha" class="form-control-sm" formControlName="senha" class="form-control bg-dark text-light rounded-0" (input)="clearMessage()">
+            <input type="password"  id="login_senha" class="form-control-sm" formControlName="senha" class="form-control bg-dark text-light rounded-0" (input)="clearMessage()">
             <label for="senha" class="form-label text-light text-opacity-75" id="label2">Senha</label>
           </div>
           <!-- Mensagem de erro -->

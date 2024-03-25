@@ -37,7 +37,7 @@ export class CadastroUsuarioComponent {
     if(
       this.formulario.value.senha === this.formulario.value.confirmarSenha
       ){        // Redirecionamento
-        this.rota.navigateByUrl('user/home-page');
+        this.rota.navigateByUrl('user/account');
       }else{
         this.mensagem ="Senhas não coincidem";
       }
