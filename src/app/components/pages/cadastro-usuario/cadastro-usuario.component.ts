@@ -20,9 +20,11 @@ export class CadastroUsuarioComponent {
     username: new FormControl('', [Validators.required ,Validators.pattern(/^[^0-9][^@#]+$/)]),
     email: new FormControl('', [Validators.required, Validators.email]),
     celular: new FormControl('', [Validators.required,Validators.pattern(/^\d{10}/)] ),
-    cep: new FormControl('',[Validators.required]),
-    senha: new FormControl('', [Validators.required]),
-    confirmarSenha: new FormControl('', [Validators.required]),
+    cep: new FormControl('', [Validators.required,Validators.pattern(/^[0-9]{8}$/)]),
+    senha: new FormControl('', [Validators.required,Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/)]),
+    confirmarSenha: new FormControl('', [Validators.required,Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/)]),
+    recoveryCode: new FormControl('',[Validators.required,Validators.pattern(/^[0-9A-Za-z!@#$%^&*()-_+=]{6,10}$/)]),
+    antiPhishingCode: new FormControl('',[Validators.required,Validators.pattern(/^[0-9A-Za-z!@#$%^&*()-_+=]{6,10}$/)]),
     termos: new FormControl('', [Validators.required]),
 
   });
@@ -47,22 +49,16 @@ export class CadastroUsuarioComponent {
   inputValues: { [key: string]: string } = {
     input_nome: '',
     input_cpf:'',
+    input_cep:'',
     input_email: '',
-    input_celular:''
+    input_celular:'',
+    input_senha:'',
+    input_confirmarSenha:'',
+    input_recoveryCode:'',
+    input_antiPhishingCode:'',
   };
 
   inputChanged(inputName: string, event: any) {
     this.inputValues[inputName] = event.target.value;
   }
-
-  // endereco
-    // Variével cep
-    cep:string = '';
-
-    // função endereço
-    obterEndereco():void{
-      this.service.retornarEndereco(this.cep)
-      .subscribe((retorno: any) => {console.log(retorno)});
-    }
-
 }
