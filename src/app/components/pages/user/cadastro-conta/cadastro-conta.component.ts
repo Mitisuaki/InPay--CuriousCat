@@ -55,15 +55,15 @@ export class CadastroContaComponent {
   UserCadastrado = "";
 
   async cadastrarConta(){
-
-    const request = await fetch('http://localhost:5066/user/{62cf6c8b-4cfb-4489-af7b-83d2bcf7336c}/acc/createPFAcc/',{
+    const request = await fetch('http://localhost:5066/user/51da4603-f805-45a6-9d58-3ec22434ebc9/acc/createPFAcc/',{
     headers: {
       'Accept': 'application/json',
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImppbWluIiwiSWQiOiI1MWRhNDYwMy1mODA1LTQ1YTYtOWQ1OC0zZWMyMjQzNGViYzkiLCJJc0FkbWluIjoiRmFsc2UiLCJleHAiOjE3MTE0MDE5MDl9.nLjdqavRs_N1Yawm514R4ki9-RBfC8hlicUapBP3KfI'
     },
     method: "POST",
     body:JSON.stringify(
-      { accNickName: "string",
+      { accNickName: "stricecc",
         adress: {
           cep: "string",
           street: "string",

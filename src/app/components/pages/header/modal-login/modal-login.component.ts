@@ -17,10 +17,6 @@ export class ModalLoginComponent {
   // Construtor
   constructor(private rota:Router){}
 
-  // Credenciais
-  email_banco:string="jimin@hybe.com";
-  senha_banco:string="@Aa12345";
-
   mensagem:string="";
   userLogado:string="";
 
@@ -29,6 +25,7 @@ export class ModalLoginComponent {
     try {
       const resposta = await this.fazerTeste();
       console.log("Token do usuário:", resposta.userToken);
+      console.log("ID do usuário:", resposta.id);
       this.userLogado = resposta.userName
       //direcionamento
       this.rota.navigateByUrl('user/account');
