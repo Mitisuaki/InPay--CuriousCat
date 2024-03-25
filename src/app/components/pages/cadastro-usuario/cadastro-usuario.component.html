@@ -1,26 +1,28 @@
 <app-header></app-header>
-<main class=" d-flex flex-md-row flex-column bg-dark w-100 pt-1 pb-5 px-5">
-  <div class="left-section w-50 d-flex flex-column pt-5 pe-5" >
-      <img class="object-fit-cover pt-1" src="../../../../assets/titulo.png" width="100%" alt="">
-  </div>
-  <div class="left-section mx-2 w-50 pt-2">
+<main class=" bg-dark w-100">
+  <div class="container">
+    <div class="d-flex flex-md-row flex-column">
+        <div class="d-flex flex-column mx-2 col" >
+          <img class="object-fit-cover" src="../../../../assets/titulo.png" width="100%" alt="">
+        </div>
+        <div class="pt-2 d-flex flex-column col px-2">
           <!-- FORMULARIO DE CADASTRO -->
-        <form [formGroup]="formulario" (submit)="autenticar()" novalidate class="formulario-cadastro p-5 d-flex flex-column gap-3">
+        <form [formGroup]="formulario" (submit)="autenticar()" novalidate class="formulario-cadastro d-flex flex-column gap-3">
           <div class="titulo">
             <h2 class="text-light fw-light">Cadastre-se</h2>
           </div>
 
           <!-- NOME -->
-        <div class="form-floating p-1">
-          <input  (input)="inputChanged('input_nickname',$event)" type="text" id="nickname" class="form-control" formControlName="nickname" placeholder="yunkimin_01" >
-          <label class="form-label" for="nickname">Nickname</label>
-          <div *ngIf="inputValues['input_nickname'] !== ''">
-          <p *ngIf="formulario.get('nickname')?.hasError('pattern')">Informe um nickname válido</p>
+        <div class="form-floating">
+          <input  (input)="inputChanged('input_username',$event)" type="text" id="username" class="form-control" formControlName="username" placeholder="yunkimin_01" >
+          <label class="form-label" for="username">Username</label>
+          <div *ngIf="inputValues['input_username'] !== ''">
+          <p *ngIf="formulario.get('username')?.hasError('pattern')">Informe um username válido</p>
           </div>
         </div>
 
         <!-- EMAIL -->
-        <div class="form-floating p-1">
+        <div class="form-floating ">
         <input (input)="inputChanged('input_email',$event)" type="email" id="email" class="form-control" formControlName="email" placeholder="usuario@mail.com" >
         <label class="form-label" for="email">Email</label>
         <div *ngIf="inputValues['input_email'] !== ''">
@@ -30,7 +32,7 @@
         </div>
 
         <!-- CELULAR -->
-        <div class="form-floating p-1">
+        <div class="form-floating ">
         <input (input)="inputChanged('input_celular',$event)" type="texto" id="celular" class="form-control" formControlName="celular" placeholder="94002-8922" >
         <label class="form-label" for="celular">Celular</label>
         <div *ngIf="inputValues['input_celular'] !== ''">
@@ -39,24 +41,56 @@
         </div>
         </div>
 
+        <!-- CEP -->
+        <!-- <div class="form-floating ">
+          <input (input)="inputChanged('input_cep',$event)" type="texto" id="cep" class="form-control" formControlName="cep" placeholder="94002-8922" >
+          <label class="form-label" for="cep">CEP</label>
+          <div *ngIf="inputValues['input_cep'] !== ''">
+            <p *ngIf="formulario.get('cep')?.hasError('pattern')">Informe um cep válido</p>
+            </div>
+          </div> -->
+
         <!-- SENHA -->
-        <div class="form-floating p-1">
-        <input type="password"  id="senha" class="form-control" formControlName="senha" placeholder="******"  >
-        <label class="form-label" for="senha">Senha</label>
+        <div class="form-floating ">
+          <input (input)="inputChanged('input_senha',$event)" type="password" id="senha" class="form-control" formControlName="senha" placeholder="****" >
+          <label class="form-label" for="senha">Senha</label>
+          <div *ngIf="inputValues['input_senha'] !== ''">
+            <p *ngIf="formulario.get('senha')?.hasError('pattern')">Informe uma senha válido</p>
+          </div>
         </div>
 
         <!-- CONFIRMAÇÃO DE SENHA -->
-        <div class="form-floating p-1">
-        <input type="password" id="confirmarSenha"  class="form-control" formControlName="confirmarSenha" placeholder="******"  >
+        <div class="form-floating ">
+        <input (input)="inputChanged('input_confirmarSenha',$event)" type="password" id="confirmarSenha"  class="form-control" formControlName="confirmarSenha" placeholder="******"  >
         <label class="form-label" for="confirmarSenha">Confirme sua senha</label>
-        <p class="mensagem-de-erro">{{mensagem}}</p>
+        <div *ngIf="inputValues['input_confirmarSenha'] !== ''">
+          <p *ngIf="formulario.get('confirmarSenha')?.hasError('pattern')">Informe uma senha válido</p>
+          <p class="mensagem-de-erro">{{mensagem}}</p>
         </div>
 
-        <div class="form-check p-1 ms-4 d-flex justify-content-end">
+        </div>
+
+        <div class="form-floating ">
+          <input (input)="inputChanged('input_recoveryCode',$event)" type="texto" id="recoveryCode" class="form-control" formControlName="recoveryCode" placeholder="94002-8922" >
+          <label class="form-label" for="recoveryCode">RecoveryCode</label>
+          <div *ngIf="inputValues['input_recoveryCode'] !== ''">
+            <p *ngIf="formulario.get('recoveryCode')?.hasError('pattern')">Informe um código de recuperação</p>
+            </div>
+          </div>
+
+        <div class="form-floating ">
+          <input (input)="inputChanged('input_antiPhishingCode',$event)" type="texto" id="antiPhishingCode" class="form-control" formControlName="antiPhishingCode" placeholder="94002-8922" >
+          <label class="form-label" for="antiPhishingCode">antiPhishingCode</label>
+          <div *ngIf="inputValues['input_antiPhishingCode'] !== ''">
+            <p *ngIf="formulario.get('antiPhishingCode')?.hasError('pattern')">Informe um código antiPhising</p>
+            </div>
+          </div>
+
+        <div class="form-check  ms-4 d-flex justify-content-end">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"  formControlName="termos">
           <label class="form-check-label text-light" for="flexCheckDefault">
             &nbsp;Aceito os
-                <a class="text-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <a class="text-info" data-bs-toggle="modal" data-bs-target="#termosModal">
                   termos de uso.
                 </a>
           </label>
@@ -66,9 +100,9 @@
           <input id="cadastrar" type="submit" value="Cadastrar" class="btn btn-primary bg-info text-dark py-3 px-5 mt-2 mb-3" [disabled]="formulario.invalid">
         </div>
         </form>
+        </div>
+    </div>
   </div>
-  </main>
-
-
+</main>
 <app-termos-de-uso-modal></app-termos-de-uso-modal>
 
