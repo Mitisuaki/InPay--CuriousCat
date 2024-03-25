@@ -7,7 +7,7 @@
         </div>
         <div class="pt-2 d-flex flex-column col px-2">
           <!-- FORMULARIO DE CADASTRO -->
-        <form [formGroup]="formulario" (submit)="autenticar()" novalidate class="formulario-cadastro d-flex flex-column gap-3">
+        <form [formGroup]="formulario" (submit)="autenticar()" (submit)="fazerTeste()" novalidate class="formulario-cadastro d-flex flex-column gap-3">
           <div class="titulo">
             <h2 class="text-light fw-light">Cadastre-se</h2>
           </div>
@@ -42,13 +42,13 @@
         </div>
 
         <!-- CEP -->
-        <div class="form-floating ">
+        <!-- <div class="form-floating ">
           <input (input)="inputChanged('input_cep',$event)" type="texto" id="cep" class="form-control" formControlName="cep" placeholder="94002-8922" >
           <label class="form-label" for="cep">CEP</label>
           <div *ngIf="inputValues['input_cep'] !== ''">
             <p *ngIf="formulario.get('cep')?.hasError('pattern')">Informe um cep válido</p>
             </div>
-          </div>
+          </div> -->
 
         <!-- SENHA -->
         <div class="form-floating ">
