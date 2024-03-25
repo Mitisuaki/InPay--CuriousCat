@@ -6,6 +6,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { AccessAccountComponent } from './components/pages/user/access-account/access-account.component';
 import { AccountHomeComponent } from './components/pages/user/account-home/account-home.component';
 import { DepositoComponent } from './components/pages/user/deposito/deposito.component';
+import { TransferenciaComponent } from './components/pages/user/transferencia/transferencia.component';
 
 export const routes: Routes = [
   {path:"", component: HomeComponent}, //home
@@ -15,4 +16,5 @@ export const routes: Routes = [
   {path:"account-home",component: AccountHomeComponent}, //inicio-conta
   {path:"",component: AccountHomeComponent},
   {path:"account/deposito",component: DepositoComponent},
+  {path:"account/transfer", component: TransferenciaComponent}
 ];
