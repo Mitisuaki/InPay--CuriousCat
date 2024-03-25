@@ -14,7 +14,18 @@ export class CadastroContaComponent {
  // FORMGROUP
  formulario = new FormGroup({
   accNickName: new FormControl('', [Validators.required ,Validators.pattern(/^[^0-9][^@#]+$/)]),
-
+  cep: new FormControl('', [Validators.required]),
+  pais: new FormControl('', [Validators.required]),
+  bairro: new FormControl('', [Validators.required]),
+  cidade: new FormControl('', [Validators.required]),
+  estado: new FormControl('', [Validators.required]),
+  rua: new FormControl('', [Validators.required]),
+  numero: new FormControl('', [Validators.required]),
+  accRecoveryCode: new FormControl('', [Validators.required]),
+  cpf: new FormControl('', [Validators.required]),
+  User_name: new FormControl('', [Validators.required]),
+  birthday: new FormControl('', [Validators.required]),
+  termos: new FormControl('', [Validators.required]),
   })
 
 
@@ -25,8 +36,11 @@ export class CadastroContaComponent {
   mensagem:string="";
   autenticar():void{
     this.rota.navigateByUrl('account-home')
+    console.log(this.cadastrarConta())
 
   }
+
+
 
   // MUDAR MENSAGEM DE ERRO CONFORME INPUT INSTANTANEAMENTE
   inputValues: { [key: string]: string } = {
@@ -40,33 +54,40 @@ export class CadastroContaComponent {
 
   UserCadastrado = "";
 
-  // async cadastrarUsuario(){
+  async cadastrarConta(){
 
-  //   const request = await fetch('http://localhost:5066/register',{
-  //   headers: {
-  //     'Accept': 'application/json',
-  //     'Content-Type': 'application/json'
-  //   },
-  //   method: "POST",
-  //   body:JSON.stringify({
-  //     userName:this.formulario.value.username,
-  //     email: this.formulario.value.email,
-  //     phoneNumber:this.formulario.value.celular,
-  //     password: this.formulario.value.senha,
-  //     passwordConfirmation: this.formulario.value.confirmarSenha,
-  //     recoveryCode: this.formulario.value.recoveryCode,
-  //     antiPishingCode: this.formulario.value.antiPhishingCode
+    const request = await fetch('http://localhost:5066/user/{62cf6c8b-4cfb-4489-af7b-83d2bcf7336c}/acc/createPFAcc/',{
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    method: "POST",
+    body:JSON.stringify(
+      { accNickName: "string",
+        adress: {
+          cep: "string",
+          street: "string",
+          number: 0,
+          neighborhood: "string",
+          city: "string",
+          state: "string",
+          country: "string",
+          complement: "string"
+        },
+        accRecoveryCode: "string",
+        cpf: "stringstrin",
+        name: "string",
+        birthDay: "2024-03-25T19:07:22.354Z"
+      }
+    )
+    });
 
-  //   })
-  //   });
+    const show = await request.json();
+    return show
 
-  //   const show = await request.json();
-
-  //   this.UserCadastrado = show.userName
-  //   return this.UserCadastrado
-
-  // }
+  }
 }
+
 
 
 
