@@ -18,27 +18,15 @@ export class ModalLoginComponent {
   constructor(private rota:Router){}
 
   // Credenciais
-  email_banco:string="fran_coimbra@hotmail.com";
-  senha_banco:string="#curiouscat_nota1000";
+  email_banco:string="jimin@hybe.com";
+  senha_banco:string="@Aa12345";
 
   mensagem:string="";
   // Função para autenticar credenciais
   autenticar():void{
-    if(
-      this.formulario.value.senha === this.senha_banco && this.formulario.value.email === this.email_banco
-      ){
-        this.rota.navigateByUrl('user/account');
-        document.getElementById("closeModal")?.click();
-          }else if(this.formulario.value.senha === this.senha_banco && this.formulario.value.email !== this.email_banco
-          ){
-            this.mensagem = "Email incorreto!"
-          }else if(this.formulario.value.senha !== this.senha_banco && this.formulario.value.email === this.email_banco
-            ){
-              this.mensagem = "Senha incorreta!"
-            }else if(this.formulario.value.senha !== this.senha_banco && this.formulario.value.email !== this.email_banco
-              ){
-                this.mensagem = "Credenciais incorretas!"
-            }
+    const resposta = this.fazerTeste();
+    console.log(resposta)
+
     }
 
   inputValues: { [key: string]: string } = {
@@ -51,6 +39,26 @@ export class ModalLoginComponent {
 
   clearMessage():void{
     this.mensagem = "";
+  }
+
+  userLoggedToken= "";
+
+
+  async fazerTeste(){
+
+    const request = await fetch('http://localhost:5066/login',{
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    method: "POST",
+    body:JSON.stringify({
+      email: this.formulario.value.email ,
+      password: this.formulario.value.senha
+    })
+    });
+    const show = await request.json();
+    return show
   }
 
 }
