@@ -1,39 +1,150 @@
-<main class=" bg-dark px-5">
-  <div class="p-5 mx-5 d-flex align-content-center justify-content-center">
-    <form class="p-5 w-75">
-      <div >
-        <p class="fs-3 text-light">Crie sua conta</p>
-      </div>
-      <div class="mb-2">
-        <label for="nome" class="form-label text-light text-opacity-75">Nome completo</label>
-        <input type="text" class="form-control" id="nome">
-        <div id="emailHelp" class="form-text text-light text-opacity-25">Nome, nome composto, sobrenome1, sobrenome2..</div>
-      </div>
-      <div class="mb-3 ">
-        <label for="cpf" class="form-label text-light text-opacity-75">CPF</label>
-        <input type="text" class="form-control" id="cpf">
-      </div>
-      <div class="mb-3 ">
-        <label for="data" class="form-label text-light text-opacity-75">Data de nascimento</label>
-        <input type="text" class="form-control" id="data">
-      </div>
-      <div class="mb-3 ">
-        <label for="cep" class="form-label text-light text-opacity-75">CEP</label>
-        <input type="text" class="form-control" id="cep">
-      </div>
-      <div class="mb-3 ">
-        <label for="nickname_conta" class="form-label text-light text-opacity-75">Nickname</label>
-        <input type="text" class="form-control" id="nickname_conta">
-        <div id="nickHelp" class="form-text text-light text-opacity-25">Crie um nickname para sua conta</div>
+<app-user-header></app-user-header>
+<main class=" w-100">
+  <div class="container">
+    <div class="d-flex flex-md-row flex-column">
+        <div class=" m-5 d-flex flex-column col-10">
 
-      </div>
-      <div class="d-flex flex-column justify-content-center align-content-center">
-        <div class="mb-3 form-check d-flex justify-content-end">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label text-light" for="exampleCheck1">&nbsp;Termos de serviço</label>
+          <!-- FORMULARIO DE CADASTRO -->
+        <form [formGroup]="formulario" (submit)="autenticar()" novalidate class="formulario-cadastro d-flex flex-column gap-3">
+          <div class="titulo">
+            <h2 class="text-light fw-light">Crie sua conta <span class="text-info">Pessoa Física</span></h2>
+          </div>
+
+          <!-- NOME DA CONTA -->
+        <div class="form-floating">
+          <input  (input)="inputChanged('input_accNickName',$event)" type="text" id="accNickName" class="form-control" formControlName="accNickName" placeholder="pf_cat" >
+          <label class="form-label" for="accNickName">Nome da conta</label>
+          <div *ngIf="inputValues['input_accNickName'] !== ''">
+          <p *ngIf="formulario.get('accNickName')?.hasError('pattern')">Informe um accNickName válido</p>
+          </div>
         </div>
-        <a href="account-home" type="submit" class="btn btn-outline-info rounded-0">Cadastrar</a>
-      </div>
-    </form>
+
+        <!-- ENDERECO -->
+
+        <div class="subtitulo pt-2">
+          <h3 class="text-light fw-light">Endereço</h3>
+        </div>
+
+        <div class="d-grid">
+
+          <div class="row my-1">
+            <!-- CEP -->
+            <div class="form-floating col">
+              <input (input)="inputChanged('input_cep',$event)" type="texto" id="cep" class="form-control" formControlName="cep" placeholder="94002-8922" >
+              <label class="form-label" for="cep">CEP</label>
+              <div *ngIf="inputValues['input_cep'] !== ''">
+                <p *ngIf="formulario.get('cep')?.hasError('pattern')">Informe um cep válido</p>
+              </div>
+            </div>
+
+            <div class="form-floating col-4">
+              <input (input)="inputChanged('input_pais',$event)" type="texto" id="pais" class="form-control" formControlName="pais" placeholder="94002-8922" >
+              <label class="form-label" for="pais">Pais</label>
+              <div *ngIf="inputValues['input_pais'] !== ''">
+                <p *ngIf="formulario.get('pais')?.hasError('pattern')">Informe um bairro válido</p>
+                </div>
+              </div>
+
+          </div>
+
+          <div class="row my-1">
+          <div class="form-floating col">
+            <input (input)="inputChanged('input_bairro',$event)" type="texto" id="bairro" class="form-control" formControlName="bairro" placeholder="94002-8922" >
+            <label class="form-label" for="bairro">Bairro</label>
+            <div *ngIf="inputValues['input_bairro'] !== ''">
+              <p *ngIf="formulario.get('bairro')?.hasError('pattern')">Informe um bairro válido</p>
+              </div>
+            </div>
+            <div class="form-floating col">
+              <input (input)="inputChanged('input_cidade',$event)" type="texto" id="cidade" class="form-control" formControlName="cidade" placeholder="94002-8922" >
+              <label class="form-label" for="cidade">Cidade</label>
+              <div *ngIf="inputValues['input_cidade'] !== ''">
+                <p *ngIf="formulario.get('cidade')?.hasError('pattern')">Informe um cidade válido</p>
+                </div>
+              </div>
+
+              <div class="form-floating col">
+                <input (input)="inputChanged('input_estado',$event)" type="texto" id="estado" class="form-control" formControlName="estado" placeholder="94002-8922" >
+                <label class="form-label" for="estado">Estado</label>
+                <div *ngIf="inputValues['input_estado'] !== ''">
+                  <p *ngIf="formulario.get('estado')?.hasError('pattern')">Informe um estado válido</p>
+                </div>
+              </div>
+
+          </div>
+
+          <div class="row my-1">
+            <div class="form-floating col">
+              <input (input)="inputChanged('input_rua',$event)" type="texto" id="rua" class="form-control" formControlName="rua" placeholder="94002-8922" >
+              <label class="form-label" for="rua">Rua</label>
+              <div *ngIf="inputValues['input_rua'] !== ''">
+                <p *ngIf="formulario.get('rua')?.hasError('pattern')">Informe um rua válido</p>
+              </div>
+            </div>
+
+            <div class="form-floating col-4">
+              <input (input)="inputChanged('input_numero',$event)" type="texto" id="numero" class="form-control" formControlName="numero" placeholder="94002-8922" >
+              <label class="form-label" for="numero">Numero</label>
+              <div *ngIf="inputValues['input_numero'] !== ''">
+                <p *ngIf="formulario.get('numero')?.hasError('pattern')">Informe um numero válido</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- MAIS INFO -->
+
+        <div class="subtitulo pt-2">
+          <h3 class="text-light fw-light">Mais informações</h3>
+        </div>
+
+              <div class="form-floating">
+                <input  (input)="inputChanged('input_accRecoveryCode',$event)" type="text" id="accRecoveryCode" class="form-control" formControlName="accRecoveryCode" placeholder="pf_cat" >
+                <label class="form-label" for="accRecoveryCode">RecoveryCode da Conta</label>
+                <div *ngIf="inputValues['input_accRecoveryCode'] !== ''">
+                <p *ngIf="formulario.get('accRecoveryCode')?.hasError('pattern')">Informe um accRecoveryCode válido</p>
+                </div>
+              </div>
+
+              <div class="form-floating">
+                <input  (input)="inputChanged('input_cpf',$event)" type="text" id="cpf" class="form-control" formControlName="cpf" placeholder="pf_cat" >
+                <label class="form-label" for="cpf">CPF</label>
+                <div *ngIf="inputValues['input_cpf'] !== ''">
+                <p *ngIf="formulario.get('cpf')?.hasError('pattern')">Informe um cpf válido</p>
+                </div>
+              </div>
+
+              <div class="form-floating">
+                <input  (input)="inputChanged('input_User_name',$event)" type="text" id="User_name" class="form-control" formControlName="User_name" placeholder="pf_cat" >
+                <label class="form-label" for="User_name">Nome</label>
+                <div *ngIf="inputValues['input_User_name'] !== ''">
+                <p *ngIf="formulario.get('User_name')?.hasError('pattern')">Informe um User_name válido</p>
+                </div>
+              </div>
+
+              <div class="form-floating">
+                <input  (input)="inputChanged('input_birthday',$event)" type="text" id="birthday" class="form-control" formControlName="birthday" placeholder="pf_cat" >
+                <label class="form-label" for="birthday">Aniversário</label>
+                <div *ngIf="inputValues['input_birthday'] !== ''">
+                <p *ngIf="formulario.get('birthday')?.hasError('pattern')">Informe um birthday válido</p>
+                </div>
+              </div>
+
+        <div class="form-check  ms-4 d-flex justify-content-end">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"  formControlName="termos">
+          <label class="form-check-label text-light" for="flexCheckDefault">
+            &nbsp;Aceito os
+                  termos de uso.
+          </label>
+        </div>
+
+        <div class=" w-100 d-flex justify-content-center">
+          <input id="criarconta" type="submit" value="Criar" class="btn btn-primary bg-info text-dark py-3 px-5 mt-2 mb-3" >
+        </div>
+        </form>
+        </div>
+    </div>
   </div>
 </main>
+
