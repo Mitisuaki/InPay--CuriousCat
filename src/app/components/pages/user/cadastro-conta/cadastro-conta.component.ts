@@ -24,7 +24,7 @@ export class CadastroContaComponent {
   // AUTENTICAR
   mensagem:string="";
   autenticar():void{
-    this.rota.navigateByUrl('user/account')
+    this.rota.navigateByUrl('account-home')
 
   }
 
